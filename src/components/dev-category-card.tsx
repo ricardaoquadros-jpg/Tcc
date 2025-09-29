@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import {
   Card,
   CardContent,
@@ -37,6 +37,40 @@ export function DevCategoryCard({
     ? technologies
     : technologies.slice(0, INITIAL_VISIBLE_TECHS);
 
+  const typeCounts = useMemo(() => {
+    return technologies.reduce((acc, tech) => {
+      acc[tech.type] = (acc[tech.type] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+  }, [technologies]);
+
+  const pluralize = (word: string, count: number) => {
+    if (count === 1) {
+      if (word === 'Ferramenta') return 'Ferramenta';
+      if (word === 'Plataforma') return 'Plataforma';
+      if (word === 'Biblioteca') return 'Biblioteca';
+      if (word === 'Linguagem') return 'Linguagem';
+    }
+    if (word.endsWith('m')) {
+      return word.slice(0, -1) + 'ns';
+    }
+    return word + 's';
+  }
+
+  const countsString = useMemo(() => {
+    const order: Technology['type'][] = ['Framework', 'Linguagem', 'Biblioteca', 'Ferramenta', 'Plataforma'];
+    const parts = order
+      .filter(type => typeCounts[type])
+      .map(type => `${typeCounts[type]} ${pluralize(type, typeCounts[type])}`);
+    
+    if(parts.length === 0) return '';
+    if(parts.length === 1) return `(${parts[0]})`;
+    
+    const lastPart = parts.pop();
+    return `(${parts.join(', ')} e ${lastPart})`;
+
+  }, [typeCounts]);
+
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <CardHeader>
@@ -53,9 +87,12 @@ export function DevCategoryCard({
         </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-grow flex-col">
-        <h3 className="mb-4 text-xl font-headline font-semibold text-foreground">
-          Principais Tecnologias
-        </h3>
+        <div className="mb-4 flex flex-wrap items-baseline gap-x-2">
+            <h3 className="text-xl font-headline font-semibold text-foreground">
+              Principais Tecnologias
+            </h3>
+            {countsString && <span className="text-sm text-muted-foreground">{countsString}</span>}
+        </div>
         <div className="grid flex-grow grid-cols-1 gap-4 sm:grid-cols-2">
           {visibleTechnologies.map((tech) => (
             <TechCard
