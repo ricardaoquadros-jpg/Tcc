@@ -97,10 +97,7 @@ export function DevCategoryCard({
           {visibleTechnologies.map((tech) => (
             <TechCard
               key={tech.name}
-              name={tech.name}
-              icon={tech.icon}
-              description={tech.description}
-              type={tech.type}
+              tech={tech}
             />
           ))}
         </div>

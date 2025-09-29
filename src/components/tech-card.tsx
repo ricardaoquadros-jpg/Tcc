@@ -15,15 +15,14 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import type { Technology } from '@/lib/constants';
 
 type TechCardProps = {
-  name: string;
-  description: string;
-  icon: ComponentType<React.SVGProps<SVGSVGElement>>;
-  type: string;
+  tech: Technology;
 };
 
-export function TechCard({ name, icon: Icon, description, type }: TechCardProps) {
+export function TechCard({ tech }: TechCardProps) {
+  const { name, icon: Icon, description, type, detailedDescription, examples } = tech;
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -48,8 +47,8 @@ export function TechCard({ name, icon: Icon, description, type }: TechCardProps)
           </CardContent>
         </Card>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader className="flex-row items-center gap-4">
+      <DialogContent className="max-w-2xl">
+        <DialogHeader className="flex-row items-start gap-4">
           <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-secondary">
             <Icon className="h-8 w-8" />
           </div>
@@ -60,8 +59,14 @@ export function TechCard({ name, icon: Icon, description, type }: TechCardProps)
             </Badge>
           </div>
         </DialogHeader>
-        <div className="py-4 text-base text-foreground/90">
-            <p>{description}</p>
+        <div className="space-y-4 py-4 text-base text-foreground/90">
+            <p>{detailedDescription || description}</p>
+            {examples && (
+              <div>
+                <h4 className="font-headline font-semibold text-lg mb-2">Usado por:</h4>
+                <p className="text-sm text-muted-foreground">{examples}</p>
+              </div>
+            )}
         </div>
       </DialogContent>
     </Dialog>
