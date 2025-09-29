@@ -1,7 +1,12 @@
 export function Html5Icon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-        <path d="M2 3h20v18H2V3zm2 2v14h16V5H4zm2 2h2v2H6V7zm4 0h8v2h-8V7zm0 4h8v2h-8v-2z" />
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path fill="#E34F26" d="M1.6 0h20.8l-1.9 21.6-8.5 2.4-8.5-2.4L1.6 0z" />
+      <path fill="#F16529" d="M12 2.15l7.6 2.1-1.7 19.2-5.9 1.65v-21z" />
+      <path
+        fill="#EBEBEB"
+        d="M12 4.35v15.4l5.1-.05.15-1.7h-3.3l.2-2.15h3.1l.3-3.4h-6.2l.2-2.15h6l.3-3.6H12z"
+      />
     </svg>
   );
 }
