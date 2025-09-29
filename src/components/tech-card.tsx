@@ -22,7 +22,7 @@ type TechCardProps = {
   tech: Technology;
 };
 
-const getScoreColor = (score: number): string => {
+const getDifficultyColor = (score: number): string => {
   const colors: { [key: number]: string } = {
     0: '#4CAF50',
     1: '#66BB6A',
@@ -40,10 +40,29 @@ const getScoreColor = (score: number): string => {
   return colors[roundedScore] || colors[10];
 };
 
+const getPopularityColor = (score: number): string => {
+  const colors: { [key: number]: string } = {
+    10: '#4CAF50',
+    9: '#66BB6A',
+    8: '#8BC34A',
+    7: '#CDDC39',
+    6: '#FFEB3B',
+    5: '#FFC107',
+    4: '#FF9800',
+    3: '#F57C00',
+    2: '#E64A19',
+    1: '#D32F2F',
+    0: '#B71C1C',
+  };
+  const roundedScore = Math.round(score);
+  return colors[roundedScore] || colors[0];
+};
+
+
 export function TechCard({ tech }: TechCardProps) {
   const { name, icon: Icon, description, type, detailedDescription, examples, difficulty, popularity } = tech;
-  const difficultyColor = getScoreColor(difficulty);
-  const popularityColor = getScoreColor(popularity);
+  const difficultyColor = getDifficultyColor(difficulty);
+  const popularityColor = getPopularityColor(popularity);
 
   return (
     <Dialog>
