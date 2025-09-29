@@ -133,7 +133,7 @@ export function DevCategoryCard({
                 <h3 className="text-xl font-headline font-semibold text-foreground">
                 Principais Tecnologias
                 </h3>
-                {countsString && <span className="text-sm text-muted-foreground">{countsString}</span>}
+                <span className="text-sm text-muted-foreground">({technologies.length} no total)</span>
             </div>
             <div className="flex items-center gap-2">
                 <DropdownMenu>
@@ -175,6 +175,7 @@ export function DevCategoryCard({
                 </DropdownMenu>
             </div>
         </div>
+        {countsString && <div className="mb-4 text-sm text-muted-foreground -mt-2">{countsString}</div>}
         <div className="grid flex-grow grid-cols-1 gap-4 sm:grid-cols-2">
           {visibleTechnologies.map((tech) => (
             <TechCard
