@@ -60,9 +60,9 @@ export function TechCard({ name, icon: Icon, description, type }: TechCardProps)
             </Badge>
           </div>
         </DialogHeader>
-        <DialogDescription className="py-4 text-base text-foreground/90">
-          {description}
-        </DialogDescription>
+        <div className="py-4 text-base text-foreground/90">
+            <p>{description}</p>
+        </div>
       </DialogContent>
     </Dialog>
   );
