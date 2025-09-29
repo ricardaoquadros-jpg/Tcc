@@ -1,13 +1,19 @@
+"use client";
+
+import { useState } from 'react';
 import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
 import { TechCard } from './tech-card';
 import type { Technology } from '@/lib/constants';
 import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 type DevCategoryCardProps = {
   title: string;
@@ -16,17 +22,24 @@ type DevCategoryCardProps = {
   accentColor: 'frontend' | 'backend';
 };
 
+const INITIAL_VISIBLE_TECHS = 4;
+
 export function DevCategoryCard({
   title,
   description,
   technologies,
   accentColor,
 }: DevCategoryCardProps) {
+  const [isExpanded, setIsExpanded] = useState(false);
   const borderColorClass =
     accentColor === 'frontend' ? 'border-frontend' : 'border-backend';
 
+  const visibleTechnologies = isExpanded
+    ? technologies
+    : technologies.slice(0, INITIAL_VISIBLE_TECHS);
+
   return (
-    <Card className="flex flex-col overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 duration-300">
+    <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       <CardHeader>
         <CardTitle
           className={cn(
@@ -40,12 +53,12 @@ export function DevCategoryCard({
           {description}
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex-grow flex flex-col">
+      <CardContent className="flex flex-col flex-grow">
         <h3 className="mb-4 text-xl font-headline font-semibold text-foreground">
           Principais Tecnologias
         </h3>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {technologies.map((tech) => (
+          {visibleTechnologies.map((tech) => (
             <TechCard
               key={tech.name}
               name={tech.name}
@@ -55,6 +68,22 @@ export function DevCategoryCard({
           ))}
         </div>
       </CardContent>
+      {technologies.length > INITIAL_VISIBLE_TECHS && (
+        <CardFooter className="mt-4">
+          <Button
+            variant="outline"
+            className="w-full"
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            {isExpanded ? 'Ver menos' : 'Ver mais'}
+            {isExpanded ? (
+              <ChevronUp className="ml-2 h-4 w-4" />
+            ) : (
+              <ChevronDown className="ml-2 h-4 w-4" />
+            )}
+          </Button>
+        </CardFooter>
+      )}
     </Card>
   );
 }
