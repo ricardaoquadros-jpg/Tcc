@@ -5,7 +5,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -67,23 +66,23 @@ export function DevCategoryCard({
             />
           ))}
         </div>
+        {technologies.length > INITIAL_VISIBLE_TECHS && (
+          <div className="mt-4">
+            <Button
+              variant="outline"
+              className="w-full"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? 'Ver menos' : 'Ver mais'}
+              {isExpanded ? (
+                <ChevronUp className="ml-2 h-4 w-4" />
+              ) : (
+                <ChevronDown className="ml-2 h-4 w-4" />
+              )}
+            </Button>
+          </div>
+        )}
       </CardContent>
-      {technologies.length > INITIAL_VISIBLE_TECHS && (
-        <CardFooter className="mt-4">
-          <Button
-            variant="outline"
-            className="w-full"
-            onClick={() => setIsExpanded(!isExpanded)}
-          >
-            {isExpanded ? 'Ver menos' : 'Ver mais'}
-            {isExpanded ? (
-              <ChevronUp className="ml-2 h-4 w-4" />
-            ) : (
-              <ChevronDown className="ml-2 h-4 w-4" />
-            )}
-          </Button>
-        </CardFooter>
-      )}
     </Card>
   );
 }
