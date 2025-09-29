@@ -83,3 +83,8 @@ export * from './akka-icon';
 export * from './cassandra-icon';
 export * from './elasticsearch-icon';
 export * from './prometheus-icon';
+export * from './sap-erp-icon';
+export * from './oracle-icon';
+export * from './sql-server-icon';
+export * from './power-bi-icon';
+export * from './tableau-icon';
