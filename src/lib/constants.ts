@@ -9,6 +9,16 @@ import {
   RustIcon,
   SvelteIcon,
   VueIcon,
+  TypescriptIcon,
+  JavascriptIcon,
+  NextjsIcon,
+  ViteIcon,
+  TailwindIcon,
+  BootstrapIcon,
+  JqueryIcon,
+  JestIcon,
+  CypressIcon,
+  StorybookIcon,
 } from '@/components/icons';
 import type { ComponentType } from 'react';
 
@@ -48,6 +58,56 @@ export const frontendTechnologies: Technology[] = [
     name: 'CSS3',
     icon: Css3Icon,
     description: 'A linguagem de folha de estilo usada para descrever a apresentação de um documento escrito em HTML.',
+  },
+  {
+    name: 'TypeScript',
+    icon: TypescriptIcon,
+    description: 'Um superconjunto de JavaScript que adiciona tipagem estática opcional.',
+  },
+  {
+    name: 'JavaScript',
+    icon: JavascriptIcon,
+    description: 'A linguagem de programação fundamental da web, executada no navegador do cliente.',
+  },
+  {
+    name: 'Next.js',
+    icon: NextjsIcon,
+    description: 'Um framework React para produção, com renderização estática e no lado do servidor.',
+  },
+  {
+    name: 'Vite',
+    icon: ViteIcon,
+    description: 'Uma ferramenta de build moderna que oferece um desenvolvimento mais rápido e ágil.',
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: TailwindIcon,
+    description: 'Um framework CSS "utility-first" para criar designs customizados rapidamente.',
+  },
+  {
+    name: 'Bootstrap',
+    icon: BootstrapIcon,
+    description: 'Framework popular para desenvolver sites responsivos e mobile-first.',
+  },
+  {
+    name: 'jQuery',
+    icon: JqueryIcon,
+    description: 'Uma biblioteca JavaScript clássica que simplifica a manipulação de HTML e eventos.',
+  },
+  {
+    name: 'Jest',
+    icon: JestIcon,
+    description: 'Um framework de teste de JavaScript com foco na simplicidade.',
+  },
+  {
+    name: 'Cypress',
+    icon: CypressIcon,
+    description: 'Ferramenta de teste de ponta a ponta para tudo que roda em um navegador.',
+  },
+  {
+    name: 'Storybook',
+    icon: StorybookIcon,
+    description: 'Uma ferramenta para desenvolver componentes de UI de forma isolada e organizada.',
   },
 ];
 
