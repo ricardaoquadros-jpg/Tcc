@@ -39,6 +39,16 @@ import {
   PurescriptIcon,
   ReasonMLIcon,
   StimulusIcon,
+  ClojurescriptIcon,
+  FsharpIcon,
+  HaxeIcon,
+  BackboneIcon,
+  KnockoutIcon,
+  PolymerIcon,
+  AureliaIcon,
+  MeteorIcon,
+  D3Icon,
+  ChartjsIcon,
 } from '@/components/icons';
 import type { ComponentType } from 'react';
 
@@ -300,6 +310,76 @@ export const frontendTechnologies: Technology[] = [
     description:
       'Um framework JavaScript modesto para dar vida ao HTML, conectando elementos a objetos JavaScript.',
     type: 'Framework',
+  },
+  {
+    name: 'ClojureScript',
+    icon: ClojurescriptIcon,
+    description:
+      'Um compilador para Clojure que gera JavaScript, permitindo o uso de uma linguagem Lisp no frontend.',
+    type: 'Linguagem',
+  },
+  {
+    name: 'F#',
+    icon: FsharpIcon,
+    description:
+      'Linguagem funcional, de código aberto e multiplataforma que pode compilar para JavaScript usando Fable.',
+    type: 'Linguagem',
+  },
+  {
+    name: 'Haxe',
+    icon: HaxeIcon,
+    description:
+      'Uma linguagem de alto nível que pode compilar para JavaScript, C++, Java e outras plataformas.',
+    type: 'Linguagem',
+  },
+  {
+    name: 'Backbone.js',
+    icon: BackboneIcon,
+    description:
+      'Fornece estrutura a aplicações web, fornecendo modelos com vinculação de chave-valor e eventos personalizados.',
+    type: 'Biblioteca',
+  },
+  {
+    name: 'Knockout.js',
+    icon: KnockoutIcon,
+    description:
+      'Uma biblioteca JavaScript que ajuda a criar interfaces de usuário ricas e responsivas com um modelo de dados subjacente.',
+    type: 'Biblioteca',
+  },
+  {
+    name: 'Polymer',
+    icon: PolymerIcon,
+    description:
+      'Uma biblioteca do Google para criar aplicativos usando Web Components.',
+    type: 'Biblioteca',
+  },
+  {
+    name: 'Aurelia',
+    icon: AureliaIcon,
+    description:
+      'Um framework de cliente moderno para web, mobile e desktop, escrito com TypeScript.',
+    type: 'Framework',
+  },
+  {
+    name: 'Meteor',
+    icon: MeteorIcon,
+    description:
+      'Uma plataforma full-stack em JavaScript para desenvolver aplicações web e móveis em tempo real.',
+    type: 'Plataforma',
+  },
+  {
+    name: 'D3.js',
+    icon: D3Icon,
+    description:
+      'Uma biblioteca JavaScript para manipular documentos com base em dados, criando visualizações de dados dinâmicas.',
+    type: 'Biblioteca',
+  },
+  {
+    name: 'Chart.js',
+    icon: ChartjsIcon,
+    description:
+      'Biblioteca de gráficos simples, porém flexível, para designers e desenvolvedores.',
+    type: 'Biblioteca',
   },
 ];
 
