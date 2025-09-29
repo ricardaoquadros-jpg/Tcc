@@ -7,6 +7,7 @@ import { DevCategoryCard } from './dev-category-card';
 import { frontendTechnologies, backendTechnologies } from '@/lib/constants';
 import { AiExplainer } from './ai-explainer';
 import { FXBLogo } from './icons/fxb-logo';
+import { JobRolesSection } from './job-roles-section';
 
 export default function MainPage() {
   const [userName, setUserName] = useState<string | null>(null);
@@ -63,7 +64,8 @@ export default function MainPage() {
                 accentColor="backend"
               />
             </div>
-
+            
+            <JobRolesSection />
             <AiExplainer />
           </div>
         </main>

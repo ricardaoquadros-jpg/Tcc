@@ -805,7 +805,7 @@ export const backendTechnologies: Technology[] = [
     description:
       'Um framework Node.js para construir aplicações do lado do servidor eficientes, escaláveis e com TypeScript.',
     type: 'Framework',
-    detailedDescription: 'NestJS é um framework para construir aplicações Node.js do lado do servidor eficientes e escaláveis. Ele usa JavaScript progressivo, é construído com e suporta totalmente o TypeScript (ainda permite que os desenvolvedores codifiquem em JavaScript puro) e combina elementos de POO (Programação Orientada a Objetos), PF (Programação Funcional) e PRF (Programação Reativa Funcional). Ele usa Express por baixo dos panos, mas também fornece compatibilidade com outros frameworks como o Fastify.',
+    detailedDescription: 'NestJS é um framework para construir aplicações Node.js do lado do servidor eficientes e escaláveis. Ele usa JavaScript progressivo, é construído com e suporta totalmente o TypeScript (ainda permite que os desenvolvedores codifiquem em JavaScript puro) e combina elementos de POO (Programação Orientada a Objetos), PF (Programação Funcional) и PRF (Programação Reativa Funcional). Ele usa Express por baixo dos panos, mas também fornece compatibilidade com outros frameworks como o Fastify.',
     examples: 'Adidas, Autodesk, Roche, e um número crescente de empresas que adotam TypeScript no backend.',
     difficulty: 7.2,
     popularity: 7.8,
@@ -1056,3 +1056,10 @@ export const backendTechnologies: Technology[] = [
     popularity: 9.1,
   },
 ];
+
+export const allTechnologies = [...frontendTechnologies, ...backendTechnologies];
+export const allTechNames = allTechnologies.map(t => t.name);
+
+export function findTechnology(name: string): Technology | undefined {
+  return allTechnologies.find(t => t.name.toLowerCase() === name.toLowerCase());
+}

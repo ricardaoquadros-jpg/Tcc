@@ -88,3 +88,8 @@ export * from './oracle-icon';
 export * from './sql-server-icon';
 export * from './power-bi-icon';
 export * from './tableau-icon';
+export * from './google-logo';
+export * from './netflix-logo';
+export * from './meta-logo';
+export * from './amazon-logo';
+export * from './apple-logo';
