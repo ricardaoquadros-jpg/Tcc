@@ -7,3 +7,5 @@ export * from './python-icon';
 export * from './java-icon';
 export * from './rust-icon';
 export * from './fxb-logo';
+export * from './html5-icon';
+export * from './css3-icon';

@@ -56,7 +56,7 @@ export function DevCategoryCard({
         <h3 className="mb-4 text-xl font-headline font-semibold text-foreground">
           Principais Tecnologias
         </h3>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 flex-grow">
           {visibleTechnologies.map((tech) => (
             <TechCard
               key={tech.name}
@@ -67,7 +67,7 @@ export function DevCategoryCard({
           ))}
         </div>
         {technologies.length > INITIAL_VISIBLE_TECHS && (
-          <div className="mt-4">
+          <div className="mt-auto pt-4">
             <Button
               variant="outline"
               className="w-full"

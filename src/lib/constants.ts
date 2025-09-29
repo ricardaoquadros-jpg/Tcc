@@ -1,5 +1,7 @@
 import {
   AngularIcon,
+  Css3Icon,
+  Html5Icon,
   JavaIcon,
   NodeIcon,
   PythonIcon,
@@ -36,6 +38,16 @@ export const frontendTechnologies: Technology[] = [
     name: 'Svelte',
     icon: SvelteIcon,
     description: 'Um compilador que transforma seu código em JavaScript vanilla, resultando em apps mais rápidos.',
+  },
+  {
+    name: 'HTML5',
+    icon: Html5Icon,
+    description: 'A linguagem de marcação padrão para criar páginas da web e aplicações web.',
+  },
+  {
+    name: 'CSS3',
+    icon: Css3Icon,
+    description: 'A linguagem de folha de estilo usada para descrever a apresentação de um documento escrito em HTML.',
   },
 ];
 
