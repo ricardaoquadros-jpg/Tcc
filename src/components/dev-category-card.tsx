@@ -52,22 +52,23 @@ export function DevCategoryCard({
           {description}
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col flex-grow">
+      <CardContent className="flex flex-grow flex-col">
         <h3 className="mb-4 text-xl font-headline font-semibold text-foreground">
           Principais Tecnologias
         </h3>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 flex-grow">
+        <div className="grid flex-grow grid-cols-1 gap-4 sm:grid-cols-2">
           {visibleTechnologies.map((tech) => (
             <TechCard
               key={tech.name}
               name={tech.name}
               icon={tech.icon}
               description={tech.description}
+              type={tech.type}
             />
           ))}
         </div>
         {technologies.length > INITIAL_VISIBLE_TECHS && (
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-6">
             <Button
               variant="outline"
               className="w-full"
