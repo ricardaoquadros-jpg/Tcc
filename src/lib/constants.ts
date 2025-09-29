@@ -29,6 +29,16 @@ import {
   LessIcon,
   PlaywrightIcon,
   ThreejsIcon,
+  ElmIcon,
+  PreactIcon,
+  AlpineIcon,
+  LitIcon,
+  SolidIcon,
+  DartIcon,
+  CoffeescriptIcon,
+  PurescriptIcon,
+  ReasonMLIcon,
+  StimulusIcon,
 } from '@/components/icons';
 import type { ComponentType } from 'react';
 
@@ -193,6 +203,66 @@ export const frontendTechnologies: Technology[] = [
     icon: ThreejsIcon,
     description:
       'Uma biblioteca 3D para JavaScript que facilita a criação de gráficos e animações na web.',
+  },
+  {
+    name: 'Elm',
+    icon: ElmIcon,
+    description:
+      'Uma linguagem funcional que compila para JavaScript, focada em confiabilidade e sem erros em tempo de execução.',
+  },
+  {
+    name: 'Preact',
+    icon: PreactIcon,
+    description:
+      'Uma alternativa rápida e leve ao React, com a mesma API moderna e apenas 3kB de tamanho.',
+  },
+  {
+    name: 'Alpine.js',
+    icon: AlpineIcon,
+    description:
+      'Um framework JavaScript minimalista para compor comportamento reativo diretamente no seu HTML.',
+  },
+  {
+    name: 'Lit',
+    icon: LitIcon,
+    description:
+      'Uma biblioteca simples para construir componentes web rápidos e leves que funcionam em qualquer framework.',
+  },
+  {
+    name: 'SolidJS',
+    icon: SolidIcon,
+    description:
+      'Um framework declarativo para construir interfaces de usuário que compila para JavaScript otimizado e reativo.',
+  },
+  {
+    name: 'Dart',
+    icon: DartIcon,
+    description:
+      'Uma linguagem otimizada para o cliente para construir rapidamente apps em qualquer plataforma (Mobile, Web, Desktop).',
+  },
+  {
+    name: 'CoffeeScript',
+    icon: CoffeescriptIcon,
+    description:
+      'Uma linguagem que compila para JavaScript, adicionando açúcar sintático inspirado em Ruby e Python.',
+  },
+  {
+    name: 'PureScript',
+    icon: PurescriptIcon,
+    description:
+      'Uma linguagem fortemente tipada e puramente funcional que compila para JavaScript legível.',
+  },
+  {
+    name: 'ReasonML',
+    icon: ReasonMLIcon,
+    description:
+      'Uma sintaxe amigável para a linguagem OCaml, criada pelo Facebook para ser robusta e segura.',
+  },
+  {
+    name: 'Stimulus',
+    icon: StimulusIcon,
+    description:
+      'Um framework JavaScript modesto para dar vida ao HTML, conectando elementos a objetos JavaScript.',
   },
 ];
 
