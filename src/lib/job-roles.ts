@@ -146,40 +146,4 @@ export const jobRoles: JobRole[] = [
       },
     ],
   },
-  {
-    title: 'Engenheiro(a) de Dados',
-    area: 'Backend',
-    description:
-      'Projeta, constrói e gerencia os pipelines de dados de uma organização, garantindo que os dados sejam coletados, armazenados e processados de forma eficiente.',
-    salary: {
-      min: 9000,
-      max: 16000,
-      source: 'Glassdoor',
-      sourceUrl: 'https://www.glassdoor.com.br/Sal%C3%A1rios/engenheiro-de-dados-sal%C3%A1rio-SRCH_KO0,20.htm',
-    },
-    responsibilities: [
-      'Construir e manter pipelines de ETL/ELT.',
-      'Modelar e gerenciar data warehouses e data lakes.',
-      'Utilizar ferramentas de Big Data como Spark e Kafka.',
-      'Garantir a qualidade e a governança dos dados.',
-      'Colaborar com cientistas de dados para fornecer dados para análise.',
-    ],
-    companies: [
-      {
-        name: 'Netflix',
-        logo: NetflixLogo,
-        technologies: getTechs('Python', 'SQL Server', 'Apache Kafka', 'Java'),
-      },
-      {
-        name: 'Apple',
-        logo: AppleLogo,
-        technologies: getTechs('Cassandra', 'Apache Kafka', 'Java', 'PostgreSQL'),
-      },
-      {
-        name: 'Amazon',
-        logo: AmazonLogo,
-        technologies: getTechs('Java', 'Python', 'Power BI', 'Oracle DB'),
-      },
-    ],
-  },
 ];
