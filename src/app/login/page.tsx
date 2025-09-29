@@ -1,4 +1,4 @@
-import { CodeClarityLogo } from '@/components/icons/code-clarity-logo';
+import { FXBLogo } from '@/components/icons/fxb-logo';
 import { LoginForm } from '@/components/login-form';
 import {
   Card,
@@ -13,9 +13,9 @@ export default function LoginPage() {
     <main className="flex min-h-screen w-full items-center justify-center bg-background p-4">
       <div className="flex animate-fade-in-up flex-col items-center space-y-8">
         <div className="flex flex-col items-center space-y-2 text-center">
-          <CodeClarityLogo className="h-16 w-16 text-frontend" />
+          <FXBLogo className="h-16 w-16 text-foreground" />
           <h1 className="text-4xl font-headline font-bold text-foreground">
-            Code Clarity
+            Front x Back
           </h1>
           <p className="max-w-md text-muted-foreground">
             Desvende os mistérios do desenvolvimento web, começando pela

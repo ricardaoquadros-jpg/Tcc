@@ -6,7 +6,7 @@ import { Header } from '@/components/header';
 import { DevCategoryCard } from './dev-category-card';
 import { frontendTechnologies, backendTechnologies } from '@/lib/constants';
 import { AiExplainer } from './ai-explainer';
-import { CodeClarityLogo } from './icons/code-clarity-logo';
+import { FXBLogo } from './icons/fxb-logo';
 
 export default function MainPage() {
   const [userName, setUserName] = useState<string | null>(null);
@@ -27,7 +27,7 @@ export default function MainPage() {
     return (
       <div className="flex h-screen items-center justify-center bg-background">
         <div className="flex flex-col items-center space-y-4">
-          <CodeClarityLogo className="h-16 w-16 animate-pulse text-frontend" />
+          <FXBLogo className="h-16 w-16 animate-pulse text-foreground" />
           <p className="text-muted-foreground">Carregando...</p>
         </div>
       </div>

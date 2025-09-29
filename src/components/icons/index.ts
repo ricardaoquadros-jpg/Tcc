@@ -6,4 +6,4 @@ export * from './node-icon';
 export * from './python-icon';
 export * from './java-icon';
 export * from './rust-icon';
-export * from './code-clarity-logo';
+export * from './fxb-logo';

@@ -1,6 +1,6 @@
 "use client";
 
-import { CodeClarityLogo } from '@/components/icons/code-clarity-logo';
+import { FXBLogo } from '@/components/icons/fxb-logo';
 import { Button } from './ui/button';
 import { useRouter } from 'next/navigation';
 import { LogOut } from 'lucide-react';
@@ -21,8 +21,8 @@ export function Header({ userName }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center">
-          <CodeClarityLogo className="mr-2 h-8 w-8 text-frontend" />
-          <span className="font-headline text-xl font-bold">Code Clarity</span>
+          <FXBLogo className="mr-2 h-8 w-8 text-foreground" />
+          <span className="font-headline text-xl font-bold">Front x Back</span>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <span className="hidden text-sm text-muted-foreground sm:inline">
