@@ -59,6 +59,7 @@ export interface Technology {
   type: 'Framework' | 'Linguagem' | 'Biblioteca' | 'Ferramenta' | 'Plataforma';
   detailedDescription?: string;
   examples?: string;
+  difficulty: number;
 }
 
 export const frontendTechnologies: Technology[] = [
@@ -69,7 +70,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca JavaScript para construir interfaces de usuário ricas e interativas.',
     type: 'Biblioteca',
     detailedDescription: 'O React é uma biblioteca JavaScript declarativa, eficiente e flexível para criar interfaces de usuário (UI). Ele permite a composição de UIs complexas a partir de pequenas e isoladas peças de código chamadas "componentes". O React utiliza um DOM virtual para otimizar o desempenho, atualizando apenas as partes da página que foram alteradas.',
-    examples: 'Facebook, Instagram, WhatsApp, Netflix, Airbnb, The New York Times.'
+    examples: 'Facebook, Instagram, WhatsApp, Netflix, Airbnb, The New York Times.',
+    difficulty: 6.5,
   },
   {
     name: 'Vue.js',
@@ -78,7 +80,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework progressivo, conhecido por sua simplicidade e excelente documentação.',
     type: 'Framework',
     detailedDescription: 'Vue.js é um framework progressivo para a construção de interfaces de usuário. Diferente de outros frameworks monolíticos, Vue foi projetado desde o início para ser adotável incrementalmente. A biblioteca principal foca apenas na camada de visualização, e é fácil de integrar com outras bibliotecas ou projetos existentes.',
-    examples: 'Alibaba, Xiaomi, Adobe, Gitlab, Behance.'
+    examples: 'Alibaba, Xiaomi, Adobe, Gitlab, Behance.',
+    difficulty: 5.5,
   },
   {
     name: 'Angular',
@@ -87,7 +90,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma plataforma robusta do Google para construir aplicações web complexas e em larga escala.',
     type: 'Plataforma',
     detailedDescription: 'Angular é uma plataforma e framework para construir aplicações de página única (SPA) usando HTML e TypeScript. Ele é mantido pelo Google e por uma comunidade de indivíduos e corporações. Angular é conhecido por ser uma solução completa, oferecendo tudo o que é necessário para construir aplicações complexas, desde roteamento até gerenciamento de estado.',
-    examples: 'Google, Microsoft (Office Home), IBM, PayPal, Upwork, The Guardian.'
+    examples: 'Google, Microsoft (Office Home), IBM, PayPal, Upwork, The Guardian.',
+    difficulty: 8.0,
   },
   {
     name: 'Svelte',
@@ -96,7 +100,8 @@ export const frontendTechnologies: Technology[] = [
       'Um compilador que transforma seu código em JavaScript vanilla, resultando em apps mais rápidos.',
     type: 'Framework',
     detailedDescription: 'Svelte é uma abordagem radicalmente nova para construir interfaces de usuário. Enquanto frameworks tradicionais como React e Vue fazem a maior parte do seu trabalho no navegador, Svelte transfere esse trabalho para uma etapa de compilação que acontece quando você constrói seu aplicativo. Isso resulta em código JavaScript imperativo altamente otimizado, proporcionando um desempenho excepcional.',
-    examples: 'Stone, The New York Times, 1Password, Philips, GoDaddy.'
+    examples: 'Stone, The New York Times, 1Password, Philips, GoDaddy.',
+    difficulty: 5.0,
   },
   {
     name: 'HTML5',
@@ -105,7 +110,8 @@ export const frontendTechnologies: Technology[] = [
       'A linguagem de marcação padrão para criar páginas da web e aplicações web.',
     type: 'Linguagem',
     detailedDescription: 'HTML5 é a espinha dorsal da web. É a linguagem de marcação usada para estruturar o conteúdo de uma página, como textos, imagens, links e vídeos. A versão 5 introduziu novas tags semânticas (<article>, <section>), suporte a multimídia (<audio>, <video>), e APIs para funcionalidades complexas como armazenamento local e gráficos 2D/3D (Canvas, WebGL).',
-    examples: 'Praticamente todos os sites na internet, incluindo Google, YouTube, Amazon.'
+    examples: 'Praticamente todos os sites na internet, incluindo Google, YouTube, Amazon.',
+    difficulty: 1.0,
   },
   {
     name: 'CSS3',
@@ -114,7 +120,8 @@ export const frontendTechnologies: Technology[] = [
       'A linguagem de folha de estilo usada para descrever a apresentação de um documento escrito em HTML.',
     type: 'Linguagem',
     detailedDescription: 'CSS (Cascading Style Sheets) é a linguagem que usamos para estilizar um documento HTML. Ela descreve como os elementos HTML devem ser exibidos na tela. O CSS3, a versão mais recente, trouxe recursos poderosos como Flexbox e Grid para layouts complexos, animações, transições, e a capacidade de criar designs responsivos que se adaptam a diferentes tamanhos de tela.',
-    examples: 'Utilizado em conjunto com HTML em todos os sites visualmente estilizados.'
+    examples: 'Utilizado em conjunto com HTML em todos os sites visualmente estilizados.',
+    difficulty: 2.5,
   },
   {
     name: 'TypeScript',
@@ -123,7 +130,8 @@ export const frontendTechnologies: Technology[] = [
       'Um superconjunto de JavaScript que adiciona tipagem estática opcional.',
     type: 'Linguagem',
     detailedDescription: 'TypeScript é uma linguagem de programação desenvolvida pela Microsoft que adiciona tipos estáticos ao JavaScript. Isso ajuda a detectar erros durante o desenvolvimento, em vez de em tempo de execução. O código TypeScript é transpilado para JavaScript puro, o que o torna compatível com qualquer navegador ou ambiente que execute JS. Adoção massiva em projetos grandes para melhorar a manutenibilidade e escalabilidade.',
-    examples: 'Angular, Slack, Asana, Visual Studio Code (que é construído com ele).'
+    examples: 'Angular, Slack, Asana, Visual Studio Code (que é construído com ele).',
+    difficulty: 7.0,
   },
   {
     name: 'JavaScript',
@@ -132,7 +140,8 @@ export const frontendTechnologies: Technology[] = [
       'A linguagem de programação fundamental da web, executada no navegador do cliente.',
     type: 'Linguagem',
     detailedDescription: 'JavaScript é uma linguagem de programação de alto nível que, junto com HTML e CSS, é uma das tecnologias centrais da World Wide Web. Ela permite criar páginas web interativas e é uma parte essencial das aplicações web. Originalmente apenas do lado do cliente, hoje também é amplamente utilizada no lado do servidor com Node.js.',
-    examples: '99% dos sites modernos, incluindo Facebook, Google, e todos os baseados em frameworks como React, Vue e Angular.'
+    examples: '99% dos sites modernos, incluindo Facebook, Google, e todos os baseados em frameworks como React, Vue e Angular.',
+    difficulty: 6.0,
   },
   {
     name: 'Next.js',
@@ -141,7 +150,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework React para produção, com renderização estática e no lado do servidor.',
     type: 'Framework',
     detailedDescription: 'Next.js é um framework React que oferece uma estrutura para construir aplicações web otimizadas para desempenho. Ele fornece funcionalidades prontas para uso, como renderização no lado do servidor (SSR), geração de sites estáticos (SSG), otimização de imagens, roteamento baseado em sistema de arquivos e suporte para API routes, simplificando o desenvolvimento de aplicações React completas e performáticas.',
-    examples: 'Vercel, TikTok, Hulu, Twitch, Nike.'
+    examples: 'Vercel, TikTok, Hulu, Twitch, Nike.',
+    difficulty: 7.5,
   },
   {
     name: 'Vite',
@@ -150,7 +160,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma ferramenta de build moderna que oferece um desenvolvimento mais rápido e ágil.',
     type: 'Ferramenta',
     detailedDescription: 'Vite é uma ferramenta de frontend de última geração que visa proporcionar uma experiência de desenvolvimento significativamente mais rápida para projetos web modernos. Ele consiste em duas partes principais: um servidor de desenvolvimento que oferece recarregamento de módulo instantâneo (HMR) e um comando de build que empacota seu código com Rollup, pré-configurado para produzir ativos estáticos altamente otimizados.',
-    examples: 'Amplamente utilizado pela comunidade Vue.js e Svelte; adotado em muitos projetos React e de outras bibliotecas.'
+    examples: 'Amplamente utilizado pela comunidade Vue.js e Svelte; adotado em muitos projetos React e de outras bibliotecas.',
+    difficulty: 4.5,
   },
   {
     name: 'Tailwind CSS',
@@ -159,7 +170,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework CSS "utility-first" para criar designs customizados rapidamente.',
     type: 'Framework',
     detailedDescription: 'Tailwind CSS é um framework CSS que adota uma abordagem "utility-first". Em vez de classes semânticas como `.card`, você compõe interfaces usando classes utilitárias como `p-4`, `flex`, `text-xl`. Isso permite criar designs altamente customizados sem sair do seu HTML e sem escrever CSS personalizado, acelerando o desenvolvimento e mantendo a consistência.',
-    examples: 'Netflix, Shopify (Polaris), GitHub, Heroku.'
+    examples: 'Netflix, Shopify (Polaris), GitHub, Heroku.',
+    difficulty: 3.5,
   },
   {
     name: 'Bootstrap',
@@ -168,7 +180,8 @@ export const frontendTechnologies: Technology[] = [
       'Framework popular para desenvolver sites responsivos e mobile-first.',
     type: 'Framework',
     detailedDescription: 'Bootstrap é um dos frameworks CSS mais antigos e populares. Ele fornece um conjunto de componentes de interface (botões, formulários, modais) e um sistema de grid responsivo, permitindo que desenvolvedores criem rapidamente sites com aparência consistente e que funcionam bem em todos os dispositivos. É uma ótima opção para prototipagem rápida e projetos que não exigem um design único.',
-    examples: 'Twitter (onde foi criado), Spotify, LinkedIn, e inúmeros temas e templates na web.'
+    examples: 'Twitter (onde foi criado), Spotify, LinkedIn, e inúmeros temas e templates na web.',
+    difficulty: 2.0,
   },
   {
     name: 'jQuery',
@@ -177,7 +190,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca JavaScript clássica que simplifica a manipulação de HTML e eventos.',
     type: 'Biblioteca',
     detailedDescription: 'jQuery é uma biblioteca JavaScript rápida, pequena e rica em recursos. Ela simplifica muito coisas como travessia e manipulação de documentos HTML, manipulação de eventos, animação e Ajax. Embora seu uso tenha diminuído com o surgimento de frameworks modernos como React e Vue, ela ainda é encontrada em muitos sites e sistemas legados, e sua influência na web é inegável.',
-    examples: 'WordPress, muitos sites mais antigos e alguns projetos que precisam de manipulação direta do DOM sem um framework completo.'
+    examples: 'WordPress, muitos sites mais antigos e alguns projetos que precisam de manipulação direta do DOM sem um framework completo.',
+    difficulty: 2.0,
   },
   {
     name: 'Jest',
@@ -185,7 +199,8 @@ export const frontendTechnologies: Technology[] = [
     description: 'Um framework de teste de JavaScript com foco na simplicidade.',
     type: 'Framework',
     detailedDescription: 'Jest é um framework de teste de JavaScript mantido pelo Facebook, projetado para garantir a correção de qualquer base de código JavaScript. Ele permite escrever testes com uma sintaxe acessível, familiar e rica em recursos. Jest oferece uma solução completa, com corredor de testes, biblioteca de asserções e capacidade de mocking (simulação) integrados.',
-    examples: 'Facebook, Twitter, Airbnb, e é o corredor de testes padrão para projetos Create React App.'
+    examples: 'Facebook, Twitter, Airbnb, e é o corredor de testes padrão para projetos Create React App.',
+    difficulty: 6.0,
   },
   {
     name: 'Cypress',
@@ -194,7 +209,8 @@ export const frontendTechnologies: Technology[] = [
       'Ferramenta de teste de ponta a ponta para tudo que roda em um navegador.',
     type: 'Ferramenta',
     detailedDescription: 'Cypress é uma ferramenta de teste de frontend de última geração construída para a web moderna. Ele permite escrever testes de ponta a ponta (E2E), testes de integração e testes de unidade. Sua arquitetura única o executa no mesmo ciclo de execução que sua aplicação, proporcionando controle total, velocidade e feedback visual em tempo real.',
-    examples: 'Usado por empresas como Disney, DHL, GoDaddy para garantir a qualidade de suas aplicações web.'
+    examples: 'Usado por empresas como Disney, DHL, GoDaddy para garantir a qualidade de suas aplicações web.',
+    difficulty: 7.0,
   },
   {
     name: 'Storybook',
@@ -203,7 +219,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma ferramenta para desenvolver componentes de UI de forma isolada e organizada.',
     type: 'Ferramenta',
     detailedDescription: 'Storybook é um ambiente de desenvolvimento de frontend para componentes de UI. Ele permite que você navegue por uma "biblioteca" de componentes, veja os diferentes estados de cada um e desenvolva componentes de forma interativa e isolada do resto da aplicação. Isso melhora a organização, a reutilização e o teste dos componentes.',
-    examples: 'Adobe, Uber, BBC, The Guardian, e a maioria das empresas com um sistema de design robusto.'
+    examples: 'Adobe, Uber, BBC, The Guardian, e a maioria das empresas com um sistema de design robusto.',
+    difficulty: 5.0,
   },
   {
     name: 'Redux',
@@ -212,7 +229,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca previsível para gerenciamento de estado em aplicações JavaScript.',
     type: 'Biblioteca',
     detailedDescription: 'Redux é um contêiner de estado previsível para aplicações JavaScript. Ele ajuda a escrever aplicações que se comportam de forma consistente, executadas em diferentes ambientes (cliente, servidor e nativo) e são fáceis de testar. Com Redux, o estado de toda a sua aplicação é armazenado em um único objeto (store), tornando mais fácil entender e depurar o fluxo de dados.',
-    examples: 'Amplamente utilizado em grandes aplicações React, embora alternativas como Context API e Zustand tenham ganhado popularidade.'
+    examples: 'Amplamente utilizado em grandes aplicações React, embora alternativas como Context API e Zustand tenham ganhado popularidade.',
+    difficulty: 7.8,
   },
   {
     name: 'GraphQL',
@@ -221,7 +239,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma linguagem de consulta para APIs que permite aos clientes pedir exatamente o que precisam.',
     type: 'Linguagem',
     detailedDescription: 'GraphQL é uma linguagem de consulta para APIs e um tempo de execução para atender a essas consultas com seus dados existentes. Ele oferece uma alternativa mais eficiente e poderosa às arquiteturas REST tradicionais. Com GraphQL, o cliente especifica exatamente quais dados ele precisa, evitando o excesso (over-fetching) ou a falta (under-fetching) de dados.',
-    examples: 'Facebook (onde foi criado), GitHub, Pinterest, Shopify, Coursera.'
+    examples: 'Facebook (onde foi criado), GitHub, Pinterest, Shopify, Coursera.',
+    difficulty: 7.2,
   },
   {
     name: 'Webpack',
@@ -230,7 +249,8 @@ export const frontendTechnologies: Technology[] = [
       'Um empacotador de módulos estáticos para aplicações JavaScript modernas.',
     type: 'Ferramenta',
     detailedDescription: 'Webpack é uma ferramenta de build que empacota módulos JavaScript para uso em um navegador. Ele pode transformar, agrupar ou empacotar praticamente qualquer recurso ou ativo. Ele pega módulos com dependências e gera ativos estáticos representando esses módulos. É altamente configurável e foi a base para muitas ferramentas de linha de comando como Create React App.',
-    examples: 'Ferramenta de base para Create React App, Vue CLI e muitos outros projetos complexos.'
+    examples: 'Ferramenta de base para Create React App, Vue CLI e muitos outros projetos complexos.',
+    difficulty: 8.5,
   },
   {
     name: 'Babel',
@@ -239,7 +259,8 @@ export const frontendTechnologies: Technology[] = [
       'Um compilador JavaScript que permite usar as versões mais recentes da linguagem.',
     type: 'Ferramenta',
     detailedDescription: 'Babel é uma cadeia de ferramentas usada principalmente para converter código ECMAScript 2015+ (as versões mais recentes do JavaScript) em uma versão compatível com versões anteriores de JavaScript em navegadores ou ambientes atuais e mais antigos. Isso permite que os desenvolvedores usem os recursos mais modernos da linguagem sem se preocupar com a compatibilidade.',
-    examples: 'Usado por quase todo o ecossistema JavaScript moderno, incluindo React, Vue, e Next.js.'
+    examples: 'Usado por quase todo o ecossistema JavaScript moderno, incluindo React, Vue, e Next.js.',
+    difficulty: 5.0,
   },
   {
     name: 'Gatsby',
@@ -248,7 +269,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework baseado em React para criar sites e aplicativos rápidos e otimizados.',
     type: 'Framework',
     detailedDescription: 'Gatsby é um gerador de sites estáticos (SSG) de código aberto baseado em React. Ele ajuda os desenvolvedores a construir sites e aplicativos extremamente rápidos, combinando o melhor do React com a performance de sites estáticos pré-renderizados. Gatsby puxa dados de qualquer fonte (CMSs, Markdown, APIs) e os usa para gerar páginas HTML estáticas na etapa de build.',
-    examples: 'Sites de marketing, blogs e documentações, como o site da DigitalOcean e da Braun.'
+    examples: 'Sites de marketing, blogs e documentações, como o site da DigitalOcean e da Braun.',
+    difficulty: 7.5,
   },
   {
     name: 'Ember.js',
@@ -257,7 +279,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework JavaScript opinativo para a criação de aplicações web ambiciosas.',
     type: 'Framework',
     detailedDescription: 'Ember.js é um framework JavaScript produtivo e testado em batalha para construir aplicações web modernas. Ele inclui tudo o que você precisa para construir interfaces de usuário ricas que funcionam em qualquer dispositivo. Ember segue a convenção sobre configuração, o que significa que ele toma decisões para você, permitindo que você se concentre na construção do seu aplicativo.',
-    examples: 'Apple Music, LinkedIn, Square, e Heroku.'
+    examples: 'Apple Music, LinkedIn, Square, e Heroku.',
+    difficulty: 8.2,
   },
   {
     name: 'Sass',
@@ -266,7 +289,8 @@ export const frontendTechnologies: Technology[] = [
       'Um pré-processador CSS que adiciona recursos como variáveis, aninhamento e mixins.',
     type: 'Linguagem',
     detailedDescription: 'Sass (Syntactically Awesome Style Sheets) é um pré-processador CSS que estende a linguagem CSS. Ele permite o uso de recursos que não existem no CSS puro, como variáveis, aninhamento de seletores, mixins (funções), herança e muito mais. O código Sass é compilado em CSS padrão para que o navegador possa interpretá-lo.',
-    examples: 'Bootstrap (versões mais antigas), e muitos sistemas de design e projetos que precisam de CSS escalável.'
+    examples: 'Bootstrap (versões mais antigas), e muitos sistemas de design e projetos que precisam de CSS escalável.',
+    difficulty: 4.0,
   },
   {
     name: 'Less',
@@ -275,7 +299,8 @@ export const frontendTechnologies: Technology[] = [
       'Outro pré-processador CSS popular que estende a funcionalidade do CSS.',
     type: 'Linguagem',
     detailedDescription: 'Less (Leaner Style Sheets) é um pré-processador CSS que, assim como o Sass, permite escrever CSS de uma forma mais programática. Ele adiciona recursos como variáveis, mixins, funções e operações. A sintaxe do Less é muito semelhante à do CSS, o que torna sua adoção bastante fácil para quem já conhece CSS.',
-    examples: 'Bootstrap (nas suas primeiras versões) e muitos outros frameworks e projetos.'
+    examples: 'Bootstrap (nas suas primeiras versões) e muitos outros frameworks e projetos.',
+    difficulty: 3.8,
   },
   {
     name: 'Playwright',
@@ -284,7 +309,8 @@ export const frontendTechnologies: Technology[] = [
       'Framework de teste de ponta a ponta da Microsoft para automação web confiável.',
     type: 'Framework',
     detailedDescription: 'Playwright é uma biblioteca Node.js para automatizar navegadores baseados em Chromium, Firefox e WebKit com uma única API. Ele permite testes de ponta a ponta (E2E) confiáveis, que são rápidos, capazes e sempre verdes. Playwright é conhecido por sua capacidade de lidar com aplicações modernas de página única e por sua excelente ferramenta de depuração.',
-    examples: 'Usado por equipes de QA na Microsoft e em outras empresas para automação de testes robustos.'
+    examples: 'Usado por equipes de QA na Microsoft e em outras empresas para automação de testes robustos.',
+    difficulty: 7.2,
   },
   {
     name: 'Three.js',
@@ -293,7 +319,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca 3D para JavaScript que facilita a criação de gráficos e animações na web.',
     type: 'Biblioteca',
     detailedDescription: 'Three.js é uma biblioteca JavaScript multiplataforma e de fácil utilização para criar e exibir gráficos 3D animados em um navegador da web usando WebGL. Ele simplifica o processo complexo de trabalhar diretamente com a API WebGL, fornecendo um conjunto de abstrações como cenas, luzes, sombras, materiais e câmeras.',
-    examples: 'Sites interativos, experiências imersivas, jogos e visualizações de produtos em 3D.'
+    examples: 'Sites interativos, experiências imersivas, jogos e visualizações de produtos em 3D.',
+    difficulty: 8.8,
   },
   {
     name: 'Elm',
@@ -302,7 +329,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma linguagem funcional que compila para JavaScript, focada em confiabilidade e sem erros em tempo de execução.',
     type: 'Linguagem',
     detailedDescription: 'Elm é uma linguagem de programação funcional para criar interfaces de usuário baseadas na web de forma declarativa. Elm compila para JavaScript e é famoso por sua garantia de "nenhum erro em tempo de execução". Seu compilador amigável e arquitetura simples ajudam a criar aplicações robustas e fáceis de manter.',
-    examples: 'Empresas que priorizam a robustez e a ausência de bugs, como a NoRedInk.'
+    examples: 'Empresas que priorizam a robustez e a ausência de bugs, como a NoRedInk.',
+    difficulty: 8.5,
   },
   {
     name: 'Preact',
@@ -311,7 +339,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma alternativa rápida e leve ao React, com a mesma API moderna e apenas 3kB de tamanho.',
     type: 'Biblioteca',
     detailedDescription: 'Preact é uma biblioteca JavaScript que se apresenta como uma alternativa rápida ao React, com o mesmo ES6 API. Ele é pequeno em tamanho (cerca de 3kB), mas oferece a maioria dos recursos do React, incluindo componentes e um DOM virtual. É uma excelente escolha para projetos onde o desempenho e o tamanho do pacote são críticos, como aplicações móveis.',
-    examples: 'Uber, Lyft, The Financial Times, e vários widgets e aplicações leves.'
+    examples: 'Uber, Lyft, The Financial Times, e vários widgets e aplicações leves.',
+    difficulty: 6.0,
   },
   {
     name: 'Alpine.js',
@@ -320,7 +349,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework JavaScript minimalista para compor comportamento reativo diretamente no seu HTML.',
     type: 'Framework',
     detailedDescription: 'Alpine.js oferece a natureza reativa e declarativa de grandes frameworks como Vue ou React por um custo muito menor. Ele permite que você "polvilhe" comportamento em sua marcação HTML sem a necessidade de uma etapa de build. É como o "Tailwind para JavaScript", permitindo que você escreva a maior parte da sua lógica diretamente no HTML.',
-    examples: 'Ideal para sites onde você precisa de pequenas ilhas de interatividade, sem um framework pesado.'
+    examples: 'Ideal para sites onde você precisa de pequenas ilhas de interatividade, sem um framework pesado.',
+    difficulty: 3.0,
   },
   {
     name: 'Lit',
@@ -329,7 +359,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca simples para construir componentes web rápidos e leves que funcionam em qualquer framework.',
     type: 'Biblioteca',
     detailedDescription: 'Lit (anteriormente LitElement) é uma biblioteca do Google para construir componentes web rápidos e leves. Ele se baseia nos padrões da web (Web Components), o que significa que os componentes que você cria com Lit são nativos do navegador e podem ser usados em qualquer página HTML, com qualquer framework (React, Vue, etc.) ou sem nenhum framework.',
-    examples: 'Usado internamente no Google para construir partes do YouTube e outras propriedades.'
+    examples: 'Usado internamente no Google para construir partes do YouTube e outras propriedades.',
+    difficulty: 6.8,
   },
   {
     name: 'SolidJS',
@@ -338,7 +369,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework declarativo para construir interfaces de usuário que compila para JavaScript otimizado e reativo.',
     type: 'Framework',
     detailedDescription: 'SolidJS é um framework JavaScript para criar interfaces de usuário que se destaca pelo seu desempenho. Ele usa uma abordagem de reatividade refinada, o que significa que ele atualiza o DOM diretamente em resposta a mudanças de estado, sem a necessidade de um DOM virtual. O resultado são aplicações extremamente rápidas e eficientes.',
-    examples: 'Aplicações que exigem altíssimo desempenho e atualizações em tempo real.'
+    examples: 'Aplicações que exigem altíssimo desempenho e atualizações em tempo real.',
+    difficulty: 7.5,
   },
   {
     name: 'Dart',
@@ -347,7 +379,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma linguagem otimizada para o cliente para construir rapidamente apps em qualquer plataforma (Mobile, Web, Desktop).',
     type: 'Linguagem',
     detailedDescription: 'Dart é uma linguagem de programação desenvolvida pelo Google, otimizada para a construção de interfaces de usuário rápidas em qualquer plataforma. Embora seja mais conhecida pelo framework mobile Flutter, Dart também pode compilar para JavaScript, permitindo o desenvolvimento de aplicações web.',
-    examples: 'A base do framework Flutter, usado por empresas como Google (Google Ads), BMW, Alibaba.'
+    examples: 'A base do framework Flutter, usado por empresas como Google (Google Ads), BMW, Alibaba.',
+    difficulty: 6.5,
   },
   {
     name: 'CoffeeScript',
@@ -356,7 +389,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma linguagem que compila para JavaScript, adicionando açúcar sintático inspirado em Ruby e Python.',
     type: 'Linguagem',
     detailedDescription: 'CoffeeScript é uma linguagem de programação que transpila para JavaScript. A ideia é expor as boas partes do JavaScript de uma forma simples. A sintaxe é inspirada em linguagens como Ruby e Python, sendo mais limpa e concisa. Foi muito popular no passado, mas perdeu espaço para o ES6 e TypeScript.',
-    examples: 'As primeiras versões do GitHub e Dropbox foram escritas em CoffeeScript.'
+    examples: 'As primeiras versões do GitHub e Dropbox foram escritas em CoffeeScript.',
+    difficulty: 4.5,
   },
   {
     name: 'PureScript',
@@ -365,7 +399,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma linguagem fortemente tipada e puramente funcional que compila para JavaScript legível.',
     type: 'Linguagem',
     detailedDescription: 'PureScript é uma linguagem de programação funcional e estaticamente tipada que compila para JavaScript. Ela se inspira em Haskell e permite que os desenvolvedores escrevam código seguro e expressivo. É uma ótima opção para quem busca os benefícios da programação funcional no ecossistema JavaScript.',
-    examples: 'Usado em nichos que exigem alta correção e modelagem de domínio complexa, como fintechs e healthtechs.'
+    examples: 'Usado em nichos que exigem alta correção e modelagem de domínio complexa, como fintechs e healthtechs.',
+    difficulty: 9.5,
   },
   {
     name: 'ReasonML',
@@ -374,7 +409,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma sintaxe amigável para a linguagem OCaml, criada pelo Facebook para ser robusta e segura.',
     type: 'Linguagem',
     detailedDescription: 'ReasonML, também conhecido como Reason, é uma nova sintaxe para a linguagem de programação OCaml. Foi criado pelo Facebook com o objetivo de tornar a OCaml, uma linguagem poderosa e segura, mais familiar para desenvolvedores JavaScript. Ele oferece um sistema de tipos robusto e compila para JavaScript rápido e legível.',
-    examples: 'Usado para construir partes do Facebook Messenger e WhatsApp.'
+    examples: 'Usado para construir partes do Facebook Messenger e WhatsApp.',
+    difficulty: 8.7,
   },
   {
     name: 'Stimulus',
@@ -383,7 +419,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework JavaScript modesto para dar vida ao HTML, conectando elementos a objetos JavaScript.',
     type: 'Framework',
     detailedDescription: 'Stimulus é um framework JavaScript com objetivos modestos. Ele não busca assumir toda a sua interface; em vez disso, foi projetado para aprimorar o HTML estático ou renderizado pelo servidor. Você escreve controladores JavaScript e os conecta a elementos em sua página usando atributos HTML simples. É a base do framework Hotwire.',
-    examples: 'Basecamp, HEY, e outros produtos da 37signals.'
+    examples: 'Basecamp, HEY, e outros produtos da 37signals.',
+    difficulty: 3.5,
   },
   {
     name: 'ClojureScript',
@@ -392,7 +429,8 @@ export const frontendTechnologies: Technology[] = [
       'Um compilador para Clojure que gera JavaScript, permitindo o uso de uma linguagem Lisp no frontend.',
     type: 'Linguagem',
     detailedDescription: 'ClojureScript é um compilador para Clojure, um dialeto da linguagem Lisp, que compila para JavaScript. Ele permite que os desenvolvedores usem a filosofia e as ferramentas do Clojure (imutabilidade, código como dados) para construir aplicações web no lado do cliente. É conhecido por sua interatividade no desenvolvimento (REPL).',
-    examples: 'CircleCI, Nubank, e outras empresas que valorizam a programação funcional e a robustez do ecossistema Lisp.'
+    examples: 'CircleCI, Nubank, e outras empresas que valorizam a programação funcional e a robustez do ecossistema Lisp.',
+    difficulty: 9.0,
   },
   {
     name: 'F#',
@@ -401,7 +439,8 @@ export const frontendTechnologies: Technology[] = [
       'Linguagem funcional, de código aberto e multiplataforma que pode compilar para JavaScript usando Fable.',
     type: 'Linguagem',
     detailedDescription: 'F# é uma linguagem de programação funcional, de propósito geral, fortemente tipada, que faz parte do ecossistema .NET. Com o compilador Fable, é possível transpilar código F# para JavaScript, permitindo o desenvolvimento web frontend com os benefícios da programação funcional e do sistema de tipos do F#.',
-    examples: 'Empresas que utilizam o ecossistema .NET e desejam aplicar os paradigmas funcionais no frontend.'
+    examples: 'Empresas que utilizam o ecossistema .NET e desejam aplicar os paradigmas funcionais no frontend.',
+    difficulty: 8.8,
   },
   {
     name: 'Haxe',
@@ -410,7 +449,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma linguagem de alto nível que pode compilar para JavaScript, C++, Java e outras plataformas.',
     type: 'Linguagem',
     detailedDescription: 'Haxe é um toolkit de código aberto de alto nível baseado em uma linguagem de programação moderna, estaticamente tipada, com sintaxe semelhante a JavaScript e outras linguagens C-like. Uma de suas principais características é a capacidade de compilar para múltiplas plataformas, incluindo JavaScript, C++, Java, C# e mais, a partir de uma única base de código.',
-    examples: 'Jogos (Dead Cells), aplicações cross-platform, e ferramentas de linha de comando.'
+    examples: 'Jogos (Dead Cells), aplicações cross-platform, e ferramentas de linha de comando.',
+    difficulty: 7.9,
   },
   {
     name: 'Backbone.js',
@@ -419,7 +459,8 @@ export const frontendTechnologies: Technology[] = [
       'Fornece estrutura a aplicações web, fornecendo modelos com vinculação de chave-valor e eventos personalizados.',
     type: 'Biblioteca',
     detailedDescription: 'Backbone.js foi uma das primeiras bibliotecas a trazer uma estrutura MVC (Model-View-Controller) para o JavaScript. Ele fornece modelos (Models) com vinculação de chave-valor, coleções (Collections) com uma rica API de funções enumeráveis, e visões (Views) com manipulação de eventos declarativa. Ajudou a organizar o código de aplicações web complexas antes da era dos frameworks modernos.',
-    examples: 'Trello, Airbnb (em suas primeiras versões), Hulu.'
+    examples: 'Trello, Airbnb (em suas primeiras versões), Hulu.',
+    difficulty: 5.8,
   },
   {
     name: 'Knockout.js',
@@ -428,7 +469,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca JavaScript que ajuda a criar interfaces de usuário ricas e responsivas com um modelo de dados subjacente.',
     type: 'Biblioteca',
     detailedDescription: 'Knockout.js é uma biblioteca que simplifica a criação de interfaces de usuário ricas e dinâmicas com JavaScript. Ele usa o padrão MVVM (Model-View-ViewModel) e se baseia em "observáveis" para atualizar automaticamente a UI sempre que o modelo de dados subjacente muda. Foi um pioneiro no conceito de data-binding declarativo.',
-    examples: 'Muito popular em aplicações .NET mais antigas (integrado com ASP.NET MVC), e em sistemas que precisavam de data-binding sem um framework completo.'
+    examples: 'Muito popular em aplicações .NET mais antigas (integrado com ASP.NET MVC), e em sistemas que precisavam de data-binding sem um framework completo.',
+    difficulty: 6.2,
   },
   {
     name: 'Polymer',
@@ -437,7 +479,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca do Google para criar aplicativos usando Web Components.',
     type: 'Biblioteca',
     detailedDescription: 'Polymer foi uma biblioteca JavaScript de código aberto do Google para a construção de aplicações web usando Web Components. O projeto visava alavancar os recursos nativos do navegador para permitir a criação de componentes encapsulados e reutilizáveis. Foi um dos pioneiros na popularização dos padrões de Web Components.',
-    examples: 'Usado em versões mais antigas do YouTube e Google Play Music.'
+    examples: 'Usado em versões mais antigas do YouTube e Google Play Music.',
+    difficulty: 7.0,
   },
   {
     name: 'Aurelia',
@@ -446,7 +489,8 @@ export const frontendTechnologies: Technology[] = [
       'Um framework de cliente moderno para web, mobile e desktop, escrito com TypeScript.',
     type: 'Framework',
     detailedDescription: 'Aurelia é um framework JavaScript moderno e flexível para a construção de aplicações web. Ele foca em seguir os padrões da web e em ter uma configuração mínima, sendo "convencional mas não opinativo". Aurelia é escrito em TypeScript e é composto por módulos menores e focados, que podem ser usados juntos ou separadamente.',
-    examples: 'Empresas que buscam um framework poderoso mas menos opinativo que o Angular.'
+    examples: 'Empresas que buscam um framework poderoso mas menos opinativo que o Angular.',
+    difficulty: 7.6,
   },
   {
     name: 'Meteor',
@@ -455,7 +499,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma plataforma full-stack em JavaScript para desenvolver aplicações web e móveis em tempo real.',
     type: 'Plataforma',
     detailedDescription: 'Meteor é uma plataforma de código aberto para web, mobile e desktop. Ela integra Node.js com outras ferramentas para fornecer uma experiência de desenvolvimento full-stack rápida e fácil. Sua principal característica é a "reatividade de dados", onde as alterações no banco de dados são propagadas automaticamente para todos os clientes conectados em tempo real.',
-    examples: 'Qualtrics, PolicyBazaar, e aplicações que necessitam de forte sincronização de dados em tempo real.'
+    examples: 'Qualtrics, PolicyBazaar, e aplicações que necessitam de forte sincronização de dados em tempo real.',
+    difficulty: 7.0,
   },
   {
     name: 'D3.js',
@@ -464,7 +509,8 @@ export const frontendTechnologies: Technology[] = [
       'Uma biblioteca JavaScript para manipular documentos com base em dados, criando visualizações de dados dinâmicas.',
     type: 'Biblioteca',
     detailedDescription: 'D3.js (Data-Driven Documents) é uma biblioteca JavaScript para produzir visualizações de dados dinâmicas e interativas em navegadores da web. Ele dá vida aos dados usando HTML, SVG e CSS. A ênfase do D3 nos padrões da web oferece todos os recursos dos navegadores modernos sem se prender a um framework proprietário, combinando poderosas técnicas de visualização com uma abordagem orientada ao DOM.',
-    examples: 'The New York Times (para gráficos interativos), visualizações complexas em dashboards de BI.'
+    examples: 'The New York Times (para gráficos interativos), visualizações complexas em dashboards de BI.',
+    difficulty: 9.0,
   },
   {
     name: 'Chart.js',
@@ -473,7 +519,8 @@ export const frontendTechnologies: Technology[] = [
       'Biblioteca de gráficos simples, porém flexível, para designers e desenvolvedores.',
     type: 'Biblioteca',
     detailedDescription: 'Chart.js é uma biblioteca de gráficos de código aberto para JavaScript que permite a criação de gráficos animados e interativos em aplicações web. É simples de usar e oferece 8 tipos de gráficos diferentes (barras, linhas, pizza, etc.), sendo uma excelente opção para adicionar visualizações de dados de forma rápida e fácil a um projeto.',
-    examples: 'Dashboards administrativos, relatórios de analytics e qualquer aplicação que precise de gráficos simples e bonitos.'
+    examples: 'Dashboards administrativos, relatórios de analytics e qualquer aplicação que precise de gráficos simples e bonitos.',
+    difficulty: 3.0,
   },
 ];
 
@@ -485,7 +532,8 @@ export const backendTechnologies: Technology[] = [
       'Permite executar JavaScript no servidor, ideal para aplicações rápidas e escaláveis.',
     type: 'Plataforma',
     detailedDescription: 'Node.js é um ambiente de execução JavaScript do lado do servidor, construído sobre o motor V8 do Google Chrome. Ele usa um modelo de I/O não bloqueante e orientado a eventos, o que o torna leve e eficiente. É perfeito para aplicações em tempo real que lidam com muitas conexões simultâneas, como chats, APIs e microsserviços.',
-    examples: 'Netflix, Uber, PayPal, LinkedIn, Trello.'
+    examples: 'Netflix, Uber, PayPal, LinkedIn, Trello.',
+    difficulty: 6.5,
   },
   {
     name: 'Python',
@@ -494,7 +542,8 @@ export const backendTechnologies: Technology[] = [
       'Versátil e com frameworks poderosos como Django e Flask, ótimo para IA e ciência de dados.',
     type: 'Linguagem',
     detailedDescription: 'Python é uma linguagem de programação de alto nível, interpretada, conhecida por sua sintaxe limpa e legibilidade. No backend, é amplamente utilizada através de frameworks como Django (uma solução completa e robusta) e Flask (um micro-framework flexível). Sua vasta coleção de bibliotecas o torna a escolha número um para ciência de dados, aprendizado de máquina e automação.',
-    examples: 'Instagram, Spotify, Google, Dropbox, Reddit (originalmente).'
+    examples: 'Instagram, Spotify, Google, Dropbox, Reddit (originalmente).',
+    difficulty: 4.0,
   },
   {
     name: 'Java',
@@ -503,7 +552,8 @@ export const backendTechnologies: Technology[] = [
       'Linguagem robusta e segura, muito usada em sistemas corporativos com o framework Spring.',
     type: 'Linguagem',
     detailedDescription: 'Java é uma linguagem de programação orientada a objetos, class-based, e de propósito geral que é projetada para ter o mínimo de dependências de implementação. É uma das linguagens mais populares para o desenvolvimento de backend corporativo, graças à sua performance, segurança e ao ecossistema maduro, dominado pelo framework Spring, que simplifica a criação de aplicações robustas e escaláveis.',
-    examples: 'Amazon, eBay, Alibaba, e a maioria das grandes instituições financeiras e de seguros.'
+    examples: 'Amazon, eBay, Alibaba, e a maioria das grandes instituições financeiras e de seguros.',
+    difficulty: 7.0,
   },
   {
     name: 'Rust',
@@ -512,6 +562,7 @@ export const backendTechnologies: Technology[] = [
       'Focado em performance e segurança de memória, ideal para sistemas de alto desempenho.',
     type: 'Linguagem',
     detailedDescription: 'Rust é uma linguagem de programação de sistemas que se concentra em velocidade, segurança de memória e paralelismo. Ela alcança esses objetivos sem a necessidade de um garbage collector (coletor de lixo). É uma excelente escolha para construir serviços de rede de alto desempenho, ferramentas de linha de comando, e sistemas embarcados onde a performance e a confiabilidade são críticas.',
-    examples: 'Discord, Figma, Dropbox (para componentes críticos de performance), Microsoft.'
+    examples: 'Discord, Figma, Dropbox (para componentes críticos de performance), Microsoft.',
+    difficulty: 9.2,
   },
 ];

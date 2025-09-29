@@ -16,13 +16,14 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import type { Technology } from '@/lib/constants';
+import { Progress } from './ui/progress';
 
 type TechCardProps = {
   tech: Technology;
 };
 
 export function TechCard({ tech }: TechCardProps) {
-  const { name, icon: Icon, description, type, detailedDescription, examples } = tech;
+  const { name, icon: Icon, description, type, detailedDescription, examples, difficulty } = tech;
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -67,6 +68,14 @@ export function TechCard({ tech }: TechCardProps) {
                 <p className="text-sm text-muted-foreground">{examples}</p>
               </div>
             )}
+             <div>
+                <h4 className="font-headline font-semibold text-lg mb-2">Dificuldade de Aprendizado</h4>
+                 <div className="flex items-center gap-4">
+                    <Progress value={difficulty * 10} className="w-[85%]" />
+                    <span className="font-mono text-lg font-semibold">{difficulty.toFixed(1)}</span>
+                 </div>
+                <p className="text-xs text-muted-foreground mt-1.5">Ranking de 0 (fácil) a 10 (difícil)</p>
+            </div>
         </div>
       </DialogContent>
     </Dialog>
