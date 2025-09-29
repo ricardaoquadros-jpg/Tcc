@@ -69,3 +69,8 @@ export * from './phoenix-icon';
 export * from './mysql-icon';
 export * from './redis-icon';
 export * from './docker-icon';
+export * from './firebase-icon';
+export * from './supabase-icon';
+export * from './nginx-icon';
+export * from './apache-kafka-icon';
+export * from './rabbitmq-icon';
