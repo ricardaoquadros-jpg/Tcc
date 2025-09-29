@@ -59,6 +59,16 @@ import {
   ExpressIcon,
   PostgresqlIcon,
   MongodbIcon,
+  DjangoIcon,
+  FlaskIcon,
+  SpringBootIcon,
+  KotlinIcon,
+  NestjsIcon,
+  ElixirIcon,
+  PhoenixIcon,
+  MysqlIcon,
+  RedisIcon,
+  DockerIcon,
 } from '@/components/icons';
 import type { ComponentType } from 'react';
 
@@ -725,5 +735,115 @@ export const backendTechnologies: Technology[] = [
     examples: 'Google, a Forbes, Toyota, Adobe, e como o "M" da stack MERN/MEVN.',
     difficulty: 5.5,
     popularity: 8.9,
+  },
+  {
+    name: 'Django',
+    icon: DjangoIcon,
+    description:
+      'Framework Python de alto nível que incentiva o desenvolvimento rápido e o design limpo e pragmático.',
+    type: 'Framework',
+    detailedDescription: 'Django é um framework web Python de alto nível que permite o desenvolvimento rápido de sites seguros e de fácil manutenção. Construído por desenvolvedores experientes, ele cuida de grande parte do incômodo do desenvolvimento web, para que você possa se concentrar em escrever seu aplicativo sem precisar reinventar a roda. É gratuito e de código aberto, tem uma comunidade próspera e ativa, ótima documentação e muitas opções de suporte gratuito e pago.',
+    examples: 'Instagram, Pinterest, National Geographic, Udemy, NASA.',
+    difficulty: 6.8,
+    popularity: 9.0,
+  },
+  {
+    name: 'Flask',
+    icon: FlaskIcon,
+    description:
+      'Um microframework Python leve, ideal para criar APIs e aplicações web menores com mais flexibilidade.',
+    type: 'Framework',
+    detailedDescription: 'Flask é um microframework para Python baseado em Werkzeug, Jinja 2 e boas intenções. É chamado de "micro" porque não exige ferramentas ou bibliotecas particulares. Ele não tem camada de abstração de banco de dados, validação de formulário ou quaisquer outros componentes onde bibliotecas de terceiros preexistentes fornecem funções comuns. No entanto, o Flask suporta extensões que podem adicionar recursos de aplicação como se tivessem sido implementados no próprio Flask.',
+    examples: 'Netflix, Reddit (em partes), Twilio, e muitas APIs internas e serviços menores.',
+    difficulty: 4.5,
+    popularity: 8.2,
+  },
+  {
+    name: 'Spring Boot',
+    icon: SpringBootIcon,
+    description:
+      'Uma extensão do framework Spring que facilita a criação de aplicações Java autônomas e de produção.',
+    type: 'Framework',
+    detailedDescription: 'O Spring Boot torna fácil a criação de aplicações Spring autônomas e de grau de produção que você pode "simplesmente executar". Ele adota uma visão opinativa da plataforma Spring e de bibliotecas de terceiros, para que você possa começar com o mínimo de barulho. A maioria das aplicações Spring Boot precisa de muito pouca configuração Spring.',
+    examples: 'Milhões de desenvolvedores e empresas em todo o mundo, incluindo a Microsoft, Amazon, e Google Cloud.',
+    difficulty: 7.5,
+    popularity: 9.2,
+  },
+  {
+    name: 'Kotlin',
+    icon: KotlinIcon,
+    description:
+      'Uma linguagem de programação moderna e estaticamente tipada, totalmente interoperável com Java.',
+    type: 'Linguagem',
+    detailedDescription: 'Kotlin é uma linguagem de programação multiplataforma, estaticamente tipada, de propósito geral, com inferência de tipo. O Kotlin é projetado para interoperar totalmente com Java, e a versão JVM da sua biblioteca padrão depende da Biblioteca de Classes Java, mas a inferência de tipo permite que sua sintaxe seja mais concisa. É a linguagem preferida do Google para desenvolvimento Android e está ganhando tração no desenvolvimento de backend.',
+    examples: 'Google, Amazon, Coursera, Atlassian (Jira), e muitas startups de tecnologia.',
+    difficulty: 6.8,
+    popularity: 8.4,
+  },
+  {
+    name: 'NestJS',
+    icon: NestjsIcon,
+    description:
+      'Um framework Node.js para construir aplicações do lado do servidor eficientes, escaláveis e com TypeScript.',
+    type: 'Framework',
+    detailedDescription: 'NestJS é um framework para construir aplicações Node.js do lado do servidor eficientes e escaláveis. Ele usa JavaScript progressivo, é construído com e suporta totalmente o TypeScript (ainda permite que os desenvolvedores codifiquem em JavaScript puro) e combina elementos de POO (Programação Orientada a Objetos), PF (Programação Funcional) e PRF (Programação Reativa Funcional). Ele usa Express por baixo dos panos, mas também fornece compatibilidade com outros frameworks como o Fastify.',
+    examples: 'Adidas, Autodesk, Roche, e um número crescente de empresas que adotam TypeScript no backend.',
+    difficulty: 7.2,
+    popularity: 7.8,
+  },
+  {
+    name: 'Elixir',
+    icon: ElixirIcon,
+    description:
+      'Uma linguagem dinâmica e funcional projetada para construir aplicações escaláveis e de fácil manutenção.',
+    type: 'Linguagem',
+    detailedDescription: 'Elixir é uma linguagem dinâmica e funcional projetada para construir aplicações escaláveis e de fácil manutenção. Elixir roda na Erlang VM, conhecida por executar sistemas de baixa latência, distribuídos e tolerantes a falhas, sendo usada em telecomunicações, bancos, e-commerce, mensagens instantâneas e muito mais. A sintaxe do Elixir é amigável e inspirada em Ruby.',
+    examples: 'WhatsApp (usa a Erlang VM), Discord, Pinterest, Bleacher Report.',
+    difficulty: 8.5,
+    popularity: 5.5,
+  },
+  {
+    name: 'Phoenix',
+    icon: PhoenixIcon,
+    description:
+      'Um framework de desenvolvimento web escrito em Elixir que implementa o padrão MVC do lado do servidor.',
+    type: 'Framework',
+    detailedDescription: 'Phoenix é um framework web construído sobre a linguagem de programação Elixir e roda na Erlang VM. Ele implementa o padrão Model-View-Controller (MVC) do lado do servidor. Phoenix é projetado para construir aplicações de alta performance e em tempo real, aproveitando a concorrência e a tolerância a falhas da plataforma Erlang.',
+    examples: 'Financial Times, Bleacher Report, e empresas que necessitam de alta concorrência e tempo real.',
+    difficulty: 8.0,
+    popularity: 5.0,
+  },
+  {
+    name: 'MySQL',
+    icon: MysqlIcon,
+    description:
+      'O sistema de gerenciamento de banco de dados relacional de código aberto mais popular do mundo.',
+    type: 'Plataforma',
+    detailedDescription: 'MySQL é um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto. Seu nome é uma combinação de "My", o nome da filha do co-fundador Michael Widenius, e "SQL", a abreviação de Structured Query Language. É um componente central da pilha de software de código aberto LAMP (Linux, Apache, MySQL, Perl/PHP/Python) e é usado por muitos aplicativos web baseados em banco de dados, incluindo o WordPress.',
+    examples: 'Facebook, YouTube, Twitter, Booking.com, GitHub, NASA.',
+    difficulty: 4.0,
+    popularity: 9.7,
+  },
+  {
+    name: 'Redis',
+    icon: RedisIcon,
+    description:
+      'Um armazenamento de estrutura de dados em memória, usado como banco de dados, cache e message broker.',
+    type: 'Plataforma',
+    detailedDescription: 'Redis é um armazenamento de estrutura de dados em memória de código aberto (licenciado pela BSD), usado como banco de dados, cache e message broker. Ele suporta estruturas de dados como strings, hashes, listas, conjuntos, conjuntos ordenados com consultas de intervalo, bitmaps, hyperloglogs, índices geoespaciais e streams. Redis tem replicação integrada, scripts Lua, remoção LRU, transações e diferentes níveis de persistência em disco.',
+    examples: 'Twitter, GitHub, Snapchat, Stack Overflow, para caching e gerenciamento de sessões.',
+    difficulty: 5.8,
+    popularity: 8.8,
+  },
+  {
+    name: 'Docker',
+    icon: DockerIcon,
+    description:
+      'Uma plataforma para desenvolver, enviar e executar aplicações em contêineres.',
+    type: 'Ferramenta',
+    detailedDescription: 'Docker é um conjunto de produtos de plataforma como serviço (PaaS) que usam virtualização em nível de sistema operacional para entregar software em pacotes chamados contêineres. Contêineres são isolados uns dos outros e agrupam seu próprio software, bibliotecas e arquivos de configuração; eles podem se comunicar uns com os outros através de canais bem definidos. Isso garante que as aplicações funcionem de forma consistente em diferentes ambientes de desenvolvimento, teste e produção.',
+    examples: 'PayPal, Netflix, Adobe, e praticamente todas as empresas de tecnologia modernas para CI/CD e implantação.',
+    difficulty: 6.5,
+    popularity: 9.9,
   },
 ];
