@@ -22,7 +22,7 @@ type TechCardProps = {
   tech: Technology;
 };
 
-const getDifficultyColor = (difficulty: number): string => {
+const getScoreColor = (score: number): string => {
   const colors: { [key: number]: string } = {
     0: '#4CAF50',
     1: '#66BB6A',
@@ -36,13 +36,14 @@ const getDifficultyColor = (difficulty: number): string => {
     9: '#D32F2F',
     10: '#B71C1C',
   };
-  const roundedDifficulty = Math.round(difficulty);
-  return colors[roundedDifficulty] || colors[10];
+  const roundedScore = Math.round(score);
+  return colors[roundedScore] || colors[10];
 };
 
 export function TechCard({ tech }: TechCardProps) {
-  const { name, icon: Icon, description, type, detailedDescription, examples, difficulty } = tech;
-  const difficultyColor = getDifficultyColor(difficulty);
+  const { name, icon: Icon, description, type, detailedDescription, examples, difficulty, popularity } = tech;
+  const difficultyColor = getScoreColor(difficulty);
+  const popularityColor = getScoreColor(popularity);
 
   return (
     <Dialog>
@@ -88,13 +89,23 @@ export function TechCard({ tech }: TechCardProps) {
                 <p className="text-sm text-muted-foreground">{examples}</p>
               </div>
             )}
-             <div>
-                <h4 className="font-headline font-semibold text-lg mb-2">Dificuldade de Aprendizado</h4>
-                 <div className="flex items-center gap-4">
-                    <Progress value={difficulty * 10} className="w-[85%]" indicatorClassName="transition-all duration-500" style={{'--progress-indicator-color': difficultyColor} as React.CSSProperties} />
-                    <span className="font-mono text-lg font-semibold">{difficulty.toFixed(1)}</span>
-                 </div>
-                <p className="text-xs text-muted-foreground mt-1.5">Ranking de 0 (fácil) a 10 (difícil)</p>
+            <div className="space-y-4">
+              <div>
+                  <h4 className="font-headline font-semibold text-lg mb-2">Dificuldade de Aprendizado</h4>
+                  <div className="flex items-center gap-4">
+                      <Progress value={difficulty * 10} className="w-[85%]" indicatorClassName="transition-all duration-500" style={{'--progress-indicator-color': difficultyColor} as React.CSSProperties} />
+                      <span className="font-mono text-lg font-semibold">{difficulty.toFixed(1)}</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1.5">Ranking de 0 (fácil) a 10 (difícil)</p>
+              </div>
+              <div>
+                  <h4 className="font-headline font-semibold text-lg mb-2">Popularidade</h4>
+                  <div className="flex items-center gap-4">
+                      <Progress value={popularity * 10} className="w-[85%]" indicatorClassName="transition-all duration-500" style={{'--progress-indicator-color': popularityColor} as React.CSSProperties} />
+                      <span className="font-mono text-lg font-semibold">{popularity.toFixed(1)}</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-1.5">Ranking de 0 (nicho) a 10 (mainstream)</p>
+              </div>
             </div>
         </div>
       </DialogContent>
