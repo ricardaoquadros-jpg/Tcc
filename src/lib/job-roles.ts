@@ -1,4 +1,3 @@
-
 import {
   allTechNames,
   backendTechnologies,
@@ -71,7 +70,7 @@ export const jobRoles: JobRole[] = [
       },
       {
         name: 'Netflix',
-        logo: NetflixLogo,
+        logo: 'https://i.imgur.com/SrnJE2s.png',
         technologies: getTechs('React', 'TypeScript', 'Redux', 'GraphQL'),
       },
     ],
@@ -133,7 +132,7 @@ export const jobRoles: JobRole[] = [
     companies: [
       {
         name: 'Netflix',
-        logo: NetflixLogo,
+        logo: 'https://i.imgur.com/SrnJE2s.png',
         technologies: getTechs('Node.js', 'React', 'Java', 'GraphQL'),
       },
       {
