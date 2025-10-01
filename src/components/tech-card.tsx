@@ -67,7 +67,11 @@ export function TechCard({ tech }: TechCardProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Card className="h-full cursor-pointer bg-secondary/30 transition-colors hover:bg-secondary/70">
+        <Card className="h-full cursor-pointer bg-secondary/30 transition-colors hover:bg-secondary/70 relative overflow-hidden">
+          <div className="absolute top-2 right-2 flex space-x-1.5">
+            <div className="h-3 w-3 rounded-full" style={{ backgroundColor: difficultyColor }} title={`Dificuldade: ${difficulty.toFixed(1)}`} />
+            <div className="h-3 w-3 rounded-full" style={{ backgroundColor: popularityColor }} title={`Popularidade: ${popularity.toFixed(1)}`} />
+          </div>
           <CardHeader className="flex-row items-start gap-4 space-y-0 pb-2">
             <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-background">
               <Icon className="h-6 w-6" />
