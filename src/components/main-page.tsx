@@ -52,12 +52,14 @@ export default function MainPage() {
 
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
               <DevCategoryCard
+                key="frontend"
                 title="Frontend"
                 description="O frontend é a parte da aplicação com a qual o usuário interage diretamente. É tudo o que você vê na tela: o layout, os botões, as cores e as animações. O objetivo do desenvolvedor frontend é criar uma experiência de usuário (UX) rica e intuitiva."
                 technologies={frontendTechnologies}
                 accentColor="frontend"
               />
               <DevCategoryCard
+                key="backend"
                 title="Backend"
                 description="O backend é o que acontece nos bastidores. Ele gerencia a lógica do servidor, o banco de dados, a autenticação de usuários e as APIs. O desenvolvedor backend garante que tudo funcione de forma segura e eficiente, fornecendo os dados que o frontend exibe."
                 technologies={backendTechnologies}
