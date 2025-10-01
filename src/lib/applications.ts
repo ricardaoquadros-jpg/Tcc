@@ -1,3 +1,4 @@
+
 import { findTechnology, type Technology } from './constants';
 import {
   AppleLogo,
@@ -60,7 +61,7 @@ function getTechs(...techs: (AppTechnology | null)[]): AppTechnology[] {
 export const applications: Application[] = [
   {
     name: 'Netflix',
-    logo: 'https://i.imgur.com/SrnJE2s.png',
+    logo: 'https://i.imgur.com/k0aHIPV.png',
     description: 'Plataforma líder de streaming de filmes e séries.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -514,5 +515,7 @@ export const applications: Application[] = [
     ),
   }
 ];
+
+    
 
     
