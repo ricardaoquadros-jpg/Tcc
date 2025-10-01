@@ -191,7 +191,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Twitter (X)',
-    logo: 'https://picsum.photos/seed/twitter/100/100',
+    logo: 'https://i.imgur.com/ZuGVuqk.png',
     description: 'Rede social para compartilhamento de mensagens curtas.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
