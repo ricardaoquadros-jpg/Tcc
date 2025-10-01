@@ -214,7 +214,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Airbnb',
-    logo: 'https://i.imgur.com/rz3WA5w.png',
+    logo: 'https://i.imgur.com/T0RCOaD.png',
     description: 'Mercado online para aluguel de acomodações.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -523,5 +523,3 @@ export const applications: Application[] = [
     
 
     
-
-
