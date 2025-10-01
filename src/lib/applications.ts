@@ -103,7 +103,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Amazon',
-    logo: 'https://picsum.photos/seed/amazon/100/100',
+    logo: 'https://i.imgur.com/6HFetXC.png',
     description: 'Líder global em e-commerce, cloud computing e IA.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -450,7 +450,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Amazon Web Services',
-    logo: 'https://picsum.photos/seed/aws/100/100',
+    logo: 'https://i.imgur.com/6HFetXC.png',
     description: 'Plataforma de serviços de computação em nuvem, segura e sob demanda.',
     technologies: getTechs(
       getTech('Angular', 'Frontend'),

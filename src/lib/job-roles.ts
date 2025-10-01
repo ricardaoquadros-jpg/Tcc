@@ -97,7 +97,7 @@ export const jobRoles: JobRole[] = [
     companies: [
       {
         name: 'Amazon',
-        logo: 'https://picsum.photos/seed/amazon/100/100',
+        logo: 'https://i.imgur.com/6HFetXC.png',
         technologies: getTechs('Java', 'Spring Boot', 'PostgreSQL', 'Docker'),
       },
       {
@@ -138,7 +138,7 @@ export const jobRoles: JobRole[] = [
       },
       {
         name: 'Amazon',
-        logo: 'https://picsum.photos/seed/amazon/100/100',
+        logo: 'https://i.imgur.com/6HFetXC.png',
         technologies: getTechs('React', 'Java', 'Spring Boot', 'Docker'),
       },
       {
