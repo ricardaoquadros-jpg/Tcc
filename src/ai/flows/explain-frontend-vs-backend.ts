@@ -17,7 +17,7 @@ const ExplainFrontendVsBackendInputSchema = z.object({
   learningGoals: z
     .string()
     .describe(
-      'The user learning goals for understanding the differences between frontend and backend development.'
+      'Os objetivos de aprendizado do usuário para entender as diferenças entre o desenvolvimento frontend e backend.'
     ),
 });
 export type ExplainFrontendVsBackendInput = z.infer<
@@ -28,7 +28,7 @@ const ExplainFrontendVsBackendOutputSchema = z.object({
   explanation: z
     .string()
     .describe(
-      'An explanation of the core differences between frontend and backend development, tailored to the user learning goals.'
+      'Uma explicação das principais diferenças entre o desenvolvimento de frontend e backend, adaptada aos objetivos de aprendizado do usuário.'
     ),
 });
 export type ExplainFrontendVsBackendOutput = z.infer<
@@ -45,11 +45,11 @@ const prompt = ai.definePrompt({
   name: 'explainFrontendVsBackendPrompt',
   input: {schema: ExplainFrontendVsBackendInputSchema},
   output: {schema: ExplainFrontendVsBackendOutputSchema},
-  prompt: `You are an expert in full-stack web development. Your job is to explain the core differences between frontend and backend development to users with different learning goals.
+  prompt: `Você é um especialista em desenvolvimento web full-stack. Seu trabalho é explicar as principais diferenças entre frontend e backend para usuários com diferentes objetivos de aprendizado.
 
-  The user has the following learning goals: {{{learningGoals}}}
+  O usuário tem os seguintes objetivos de aprendizado: {{{learningGoals}}}
 
-  Based on these goals, explain the differences between frontend and backend development. Be clear and concise.
+  Com base nesses objetivos, explique em português as diferenças entre frontend e backend. Seja claro e conciso.
   `,
 });
 

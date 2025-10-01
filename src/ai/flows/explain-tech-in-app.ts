@@ -15,11 +15,11 @@ import { z } from 'genkit';
 const ExplainTechInAppInputSchema = z.object({
   applicationName: z
     .string()
-    .describe('The name of the application (e.g., Netflix, Google).'),
+    .describe('O nome da aplicação (ex: Netflix, Google).'),
   technologyName: z
     .string()
     .describe(
-      'The name of the technology to explain (e.g., React, Node.js).'
+      'O nome da tecnologia a ser explicada (ex: React, Node.js).'
     ),
 });
 export type ExplainTechInAppInput = z.infer<typeof ExplainTechInAppInputSchema>;
@@ -28,7 +28,7 @@ const ExplainTechInAppOutputSchema = z.object({
   explanation: z
     .string()
     .describe(
-      'A concise explanation of the technology\'s role within the specified application.'
+      'Uma explicação concisa do papel da tecnologia dentro da aplicação especificada.'
     ),
 });
 export type ExplainTechInAppOutput = z.infer<
@@ -45,14 +45,14 @@ const prompt = ai.definePrompt({
   name: 'explainTechInAppPrompt',
   input: { schema: ExplainTechInAppInputSchema },
   output: { schema: ExplainTechInAppOutputSchema },
-  prompt: `You are a senior software engineer explaining how a specific technology is used in a famous application.
+  prompt: `Você é um engenheiro de software sênior explicando como uma tecnologia específica é usada em uma aplicação famosa. Sua resposta deve ser em português.
 
-  Application: {{{applicationName}}}
-  Technology: {{{technologyName}}}
+  Aplicação: {{{applicationName}}}
+  Tecnologia: {{{technologyName}}}
 
-  Based on public knowledge, explain the role of {{{technologyName}}} at {{{applicationName}}}.
-  Be concise and focus on one or two key functionalities. For example, how Netflix uses React for its dynamic UI, or how Discord uses Rust for high-performance real-time communication.
-  The explanation should be a single paragraph.
+  Com base no conhecimento público, explique o papel de {{{technologyName}}} na {{{applicationName}}}.
+  Seja conciso e foque em uma ou duas funcionalidades chave. Por exemplo, como a Netflix usa React para sua UI dinâmica, ou como o Discord usa Rust para comunicação em tempo real de alta performance.
+  A explicação deve ser um único parágrafo.
   `,
 });
 
