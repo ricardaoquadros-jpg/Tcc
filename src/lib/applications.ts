@@ -203,7 +203,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Twitch',
-    logo: 'https://picsum.photos/seed/twitch/100/100',
+    logo: 'https://i.imgur.com/rz3WA5w.png',
     description: 'Plataforma de streaming ao vivo, focada em videogames.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -523,3 +523,4 @@ export const applications: Application[] = [
     
 
     
+
