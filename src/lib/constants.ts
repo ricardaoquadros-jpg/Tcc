@@ -1,3 +1,4 @@
+
 import {
   AngularIcon,
   Css3Icon,
@@ -1061,5 +1062,8 @@ export const allTechnologies = [...frontendTechnologies, ...backendTechnologies]
 export const allTechNames = allTechnologies.map(t => t.name);
 
 export function findTechnology(name: string): Technology | undefined {
+  if (!name) return undefined;
   return allTechnologies.find(t => t.name.toLowerCase() === name.toLowerCase());
 }
+
+    

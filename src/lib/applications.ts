@@ -1,3 +1,4 @@
+
 import { findTechnology, type Technology } from './constants';
 import {
   AppleLogo,
@@ -41,7 +42,7 @@ type AppTechnology = {
 
 export interface Application {
   name: string;
-  logo: React.FC<React.SVGProps<SVGSVGElement>>;
+  logo: string;
   description: string;
   technologies: AppTechnology[];
 }
@@ -59,7 +60,7 @@ function getTechs(...techs: (AppTechnology | null)[]): AppTechnology[] {
 export const applications: Application[] = [
   {
     name: 'Netflix',
-    logo: NetflixLogo,
+    logo: 'https://picsum.photos/seed/netflix/100/100',
     description: 'Plataforma líder de streaming de filmes e séries.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -73,7 +74,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Google',
-    logo: GoogleLogo,
+    logo: 'https://picsum.photos/seed/google/100/100',
     description: 'O maior motor de busca do mundo e gigante de tecnologia.',
     technologies: getTechs(
       getTech('Angular', 'Frontend'),
@@ -87,7 +88,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Meta (Facebook)',
-    logo: MetaLogo,
+    logo: 'https://picsum.photos/seed/meta/100/100',
     description: 'A maior rede social do mundo e um conglomerado de tecnologia.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -101,7 +102,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Amazon',
-    logo: AmazonLogo,
+    logo: 'https://picsum.photos/seed/amazon/100/100',
     description: 'Líder global em e-commerce, cloud computing e IA.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -114,7 +115,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Apple',
-    logo: AppleLogo,
+    logo: 'https://picsum.photos/seed/apple/100/100',
     description: 'Uma das empresas mais valiosas do mundo, criadora do iPhone.',
     technologies: getTechs(
       getTech('Svelte', 'Frontend'), // Apple Music
@@ -126,7 +127,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Shopify',
-    logo: ShopifyIcon,
+    logo: 'https://picsum.photos/seed/shopify/100/100',
     description: 'Plataforma de e-commerce que permite a criação de lojas virtuais.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -138,7 +139,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Discord',
-    logo: DiscordIcon,
+    logo: 'https://picsum.photos/seed/discord/100/100',
     description: 'Plataforma de comunicação por voz, vídeo e texto.',
     technologies: getTechs(
         getTech('React', 'Frontend'),
@@ -151,7 +152,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Figma',
-    logo: FigmaIcon,
+    logo: 'https://picsum.photos/seed/figma/100/100',
     description: 'Ferramenta de design de interface colaborativa baseada na web.',
     technologies: getTechs(
         getTech('React', 'Frontend'),
@@ -163,7 +164,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Uber',
-    logo: UberIcon,
+    logo: 'https://picsum.photos/seed/uber/100/100',
     description: 'Empresa de transporte que oferece serviços de motorista particular.',
      technologies: getTechs(
         getTech('React', 'Frontend'),
@@ -177,7 +178,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Slack',
-    logo: SlackIcon,
+    logo: 'https://picsum.photos/seed/slack/100/100',
     description: 'Plataforma de mensagens para equipes e colaboração.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -189,7 +190,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Twitter (X)',
-    logo: TwitterIcon,
+    logo: 'https://picsum.photos/seed/twitter/100/100',
     description: 'Rede social para compartilhamento de mensagens curtas.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -201,7 +202,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Twitch',
-    logo: TwitchIcon,
+    logo: 'https://picsum.photos/seed/twitch/100/100',
     description: 'Plataforma de streaming ao vivo, focada em videogames.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -212,7 +213,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Airbnb',
-    logo: AirbnbIcon,
+    logo: 'https://picsum.photos/seed/airbnb/100/100',
     description: 'Mercado online para aluguel de acomodações.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -224,7 +225,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Pinterest',
-    logo: PinterestIcon,
+    logo: 'https://picsum.photos/seed/pinterest/100/100',
     description: 'Rede social para descoberta visual e compartilhamento de imagens.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -235,7 +236,7 @@ export const applications: Application[] = [
   },
   {
     name: 'LinkedIn',
-    logo: LinkedinIcon,
+    logo: 'https://picsum.photos/seed/linkedin/100/100',
     description: 'A maior rede profissional do mundo.',
     technologies: getTechs(
       getTech('Ember.js', 'Frontend'),
@@ -246,7 +247,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Spotify',
-    logo: SpotifyIcon,
+    logo: 'https://picsum.photos/seed/spotify/100/100',
     description: 'Serviço de streaming de música, podcasts e vídeos.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -258,7 +259,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Trello',
-    logo: TrelloIcon,
+    logo: 'https://picsum.photos/seed/trello/100/100',
     description: 'Ferramenta de gerenciamento de projetos no estilo Kanban.',
     technologies: getTechs(
       getTech('Backbone.js', 'Frontend'),
@@ -268,7 +269,7 @@ export const applications: Application[] = [
   },
   {
     name: 'GitHub',
-    logo: GithubIcon,
+    logo: 'https://picsum.photos/seed/github/100/100',
     description: 'Plataforma de hospedagem de código e colaboração.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -279,7 +280,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Atlassian (Jira)',
-    logo: AtlassianIcon,
+    logo: 'https://picsum.photos/seed/atlassian/100/100',
     description: 'Ferramenta líder para rastreamento de bugs e gerenciamento de projetos ágeis.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -290,7 +291,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Microsoft',
-    logo: MicrosoftIcon,
+    logo: 'https://picsum.photos/seed/microsoft/100/100',
     description: 'Gigante global de software, criadora do Windows e Office.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -302,7 +303,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Wikipedia',
-    logo: WikipediaIcon,
+    logo: 'https://picsum.photos/seed/wikipedia/100/100',
     description: 'A maior enciclopédia online livre e colaborativa do mundo.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -312,7 +313,7 @@ export const applications: Application[] = [
   },
   {
     name: 'WordPress',
-    logo: WordPressIcon,
+    logo: 'https://picsum.photos/seed/wordpress/100/100',
     description: 'O sistema de gerenciamento de conteúdo (CMS) mais popular do mundo.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -323,7 +324,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Reddit',
-    logo: RedditIcon,
+    logo: 'https://picsum.photos/seed/reddit/100/100',
     description: 'Uma vasta rede de comunidades baseadas nos interesses das pessoas.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -335,7 +336,7 @@ export const applications: Application[] = [
   },
   {
     name: 'TikTok',
-    logo: TikTokIcon,
+    logo: 'https://picsum.photos/seed/tiktok/100/100',
     description: 'Plataforma de vídeos curtos que se tornou um fenômeno global.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -347,7 +348,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Zoom',
-    logo: ZoomIcon,
+    logo: 'https://picsum.photos/seed/zoom/100/100',
     description: 'Plataforma líder de videoconferência e comunicação por vídeo.',
     technologies: getTechs(
       getTech('Angular', 'Frontend'),
@@ -358,7 +359,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Salesforce',
-    logo: SalesforceIcon,
+    logo: 'https://picsum.photos/seed/salesforce/100/100',
     description: 'Plataforma de CRM nº 1 do mundo para vendas, serviços e marketing.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -369,7 +370,7 @@ export const applications: Application[] = [
   },
   {
     name: 'eBay',
-    logo: EbayIcon,
+    logo: 'https://picsum.photos/seed/ebay/100/100',
     description: 'Um dos maiores mercados online do mundo para leilões e vendas.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -380,7 +381,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Stripe',
-    logo: StripeIcon,
+    logo: 'https://picsum.photos/seed/stripe/100/100',
     description: 'Plataforma de processamento de pagamentos para negócios online.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -392,7 +393,7 @@ export const applications: Application[] = [
   },
   {
     name: 'PayPal',
-    logo: PaypalIcon,
+    logo: 'https://picsum.photos/seed/paypal/100/100',
     description: 'Sistema de pagamento online que atua como alternativa aos métodos tradicionais.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -404,7 +405,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Instagram',
-    logo: MetaLogo,
+    logo: 'https://picsum.photos/seed/instagram/100/100',
     description: 'Rede social de compartilhamento de fotos e vídeos.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -415,18 +416,18 @@ export const applications: Application[] = [
   },
   {
     name: 'WhatsApp',
-    logo: MetaLogo,
+    logo: 'https://picsum.photos/seed/whatsapp/100/100',
     description: 'Aplicativo de mensagens instantâneas para smartphones.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
       getTech('Java', 'Backend'),
-      getTech('FreeBSD', 'Backend'),
+      getTech('Elixir', 'Backend'),
       getTech('PostgreSQL', 'Backend')
     ),
   },
   {
     name: 'YouTube',
-    logo: GoogleLogo,
+    logo: 'https://picsum.photos/seed/youtube/100/100',
     description: 'A maior plataforma de compartilhamento de vídeos do mundo.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -437,7 +438,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Google Maps',
-    logo: GoogleLogo,
+    logo: 'https://picsum.photos/seed/gmaps/100/100',
     description: 'Serviço de pesquisa e visualização de mapas e imagens de satélite.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -448,7 +449,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Amazon Web Services',
-    logo: AmazonLogo,
+    logo: 'https://picsum.photos/seed/aws/100/100',
     description: 'Plataforma de serviços de computação em nuvem, segura e sob demanda.',
     technologies: getTechs(
       getTech('Angular', 'Frontend'),
@@ -459,7 +460,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Microsoft Office 365',
-    logo: MicrosoftIcon,
+    logo: 'https://picsum.photos/seed/office/100/100',
     description: 'Conjunto de aplicativos de produtividade em nuvem, como Word e Excel.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -470,7 +471,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Facebook Messenger',
-    logo: MetaLogo,
+    logo: 'https://picsum.photos/seed/messenger/100/100',
     description: 'Serviço de mensagens instantâneas integrado ao Facebook.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -481,7 +482,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Canva',
-    logo: CanvaIcon,
+    logo: 'https://picsum.photos/seed/canva/100/100',
     description: 'Plataforma de design gráfico que permite aos usuários criar gráficos e outros conteúdos visuais.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -492,7 +493,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Dropbox',
-    logo: DropboxIcon,
+    logo: 'https://picsum.photos/seed/dropbox/100/100',
     description: 'Serviço de armazenamento de arquivos em nuvem e sincronização.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -504,7 +505,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Notion',
-    logo: NotionIcon,
+    logo: 'https://picsum.photos/seed/notion/100/100',
     description: 'Aplicativo de produtividade que oferece um espaço de trabalho tudo-em-um.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -513,3 +514,5 @@ export const applications: Application[] = [
     ),
   }
 ];
+
+    

@@ -1,3 +1,4 @@
+
 import type { JobRole } from "@/lib/job-roles";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -5,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ArrowRight, CheckCircle2, DollarSign, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
+import Image from 'next/image';
 
 type JobRoleCardProps = {
     role: JobRole;
@@ -40,8 +42,8 @@ export function JobRoleCard({ role }: JobRoleCardProps) {
                     <div className="space-y-4">
                         {role.companies.map((company) => (
                             <div key={company.name} className="flex items-start gap-4">
-                                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-muted border">
-                                    <company.logo className="h-6 w-6" />
+                                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-muted border overflow-hidden">
+                                     <Image src={company.logo} alt={`${company.name} logo`} width={40} height={40} className="object-cover" />
                                 </div>
                                 <div className="flex-grow">
                                     <p className="font-medium text-foreground/90">{company.name}</p>
@@ -91,3 +93,5 @@ export function JobRoleCard({ role }: JobRoleCardProps) {
         </Card>
     );
 }
+
+    

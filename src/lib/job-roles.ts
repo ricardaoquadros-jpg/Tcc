@@ -1,3 +1,4 @@
+
 import {
   allTechNames,
   backendTechnologies,
@@ -15,7 +16,7 @@ import {
 
 type Company = {
   name: string;
-  logo: React.FC<React.SVGProps<SVGSVGElement>>;
+  logo: string;
   technologies: Technology[];
 };
 
@@ -59,17 +60,17 @@ export const jobRoles: JobRole[] = [
     companies: [
       {
         name: 'Meta',
-        logo: MetaLogo,
+        logo: 'https://picsum.photos/seed/meta/100/100',
         technologies: getTechs('React', 'JavaScript', 'GraphQL', 'Jest'),
       },
       {
         name: 'Google',
-        logo: GoogleLogo,
+        logo: 'https://picsum.photos/seed/google/100/100',
         technologies: getTechs('Angular', 'TypeScript', 'Dart', 'Firebase'),
       },
       {
         name: 'Netflix',
-        logo: NetflixLogo,
+        logo: 'https://picsum.photos/seed/netflix/100/100',
         technologies: getTechs('React', 'TypeScript', 'Redux', 'GraphQL'),
       },
     ],
@@ -95,17 +96,17 @@ export const jobRoles: JobRole[] = [
     companies: [
       {
         name: 'Amazon',
-        logo: AmazonLogo,
+        logo: 'https://picsum.photos/seed/amazon/100/100',
         technologies: getTechs('Java', 'Spring Boot', 'PostgreSQL', 'Docker'),
       },
       {
         name: 'Google',
-        logo: GoogleLogo,
+        logo: 'https://picsum.photos/seed/google/100/100',
         technologies: getTechs('Go', 'Python', 'Kubernetes', 'gRPC'),
       },
       {
         name: 'Apple',
-        logo: AppleLogo,
+        logo: 'https://picsum.photos/seed/apple/100/100',
         technologies: getTechs('Scala', 'Cassandra', 'Java', 'PostgreSQL'),
       },
     ],
@@ -131,19 +132,21 @@ export const jobRoles: JobRole[] = [
     companies: [
       {
         name: 'Netflix',
-        logo: NetflixLogo,
+        logo: 'https://picsum.photos/seed/netflix/100/100',
         technologies: getTechs('Node.js', 'React', 'Java', 'GraphQL'),
       },
       {
         name: 'Amazon',
-        logo: AmazonLogo,
+        logo: 'https://picsum.photos/seed/amazon/100/100',
         technologies: getTechs('React', 'Java', 'Spring Boot', 'Docker'),
       },
       {
         name: 'Meta',
-        logo: MetaLogo,
+        logo: 'https://picsum.photos/seed/meta/100/100',
         technologies: getTechs('React', 'PHP', 'Python', 'MySQL'),
       },
     ],
   },
 ];
+
+    

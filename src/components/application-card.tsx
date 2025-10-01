@@ -11,6 +11,7 @@ import { getTechExplanation } from '@/app/actions';
 import { Skeleton } from './ui/skeleton';
 import { Sparkles } from 'lucide-react';
 import { Technology } from '@/lib/constants';
+import Image from 'next/image';
 
 type ApplicationCardProps = {
     application: Application;
@@ -77,8 +78,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <DialogTrigger asChild>
                 <Card className="flex flex-col h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
                     <CardHeader className="flex-row items-center gap-4">
-                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-muted border">
-                            <application.logo className="h-7 w-7" />
+                        <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-muted border overflow-hidden">
+                             <Image src={application.logo} alt={`${application.name} logo`} width={48} height={48} className="object-cover" />
                         </div>
                         <div>
                             <CardTitle className="font-headline text-xl">{application.name}</CardTitle>
@@ -133,8 +134,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             </DialogTrigger>
             <DialogContent className="max-w-3xl">
                 <DialogHeader className="flex-row items-center gap-4">
-                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-muted border">
-                        <application.logo className="h-9 w-9" />
+                    <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-muted border overflow-hidden">
+                        <Image src={application.logo} alt={`${application.name} logo`} width={64} height={64} className="object-cover" />
                     </div>
                     <div>
                         <DialogTitle className="font-headline text-2xl">Stack de Tecnologias do {application.name}</DialogTitle>
@@ -168,3 +169,5 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         </Dialog>
     );
 }
+
+    
