@@ -9,8 +9,7 @@ import { AiExplainer } from './ai-explainer';
 import { FXBLogo } from './icons/fxb-logo';
 import { JobRolesSection } from './job-roles-section';
 import { Button } from './ui/button';
-import { ArrowDown, Briefcase, Sparkles } from 'lucide-react';
-import { Separator } from './ui/separator';
+import { ArrowDown } from 'lucide-react';
 
 function MainContent() {
     const handleScroll = (id: string) => {
@@ -86,25 +85,35 @@ export default function MainPage() {
         <Header userName={userName} />
         <main className="flex-1">
           <div className="container py-8 md:py-12">
-            <div className="mb-12 text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
-                Frontend vs. Backend
-              </h1>
-              <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-                Explore os dois lados da moeda do desenvolvimento web. Entenda suas responsabilidades, tecnologias e como eles colaboram para criar aplicações incríveis.
-              </p>
-            </div>
             
-            {!isExploring && (
-                <div className="mt-16 text-center">
+            {!isExploring ? (
+                <div className="flex flex-col items-center justify-center text-center py-16">
+                    <div className="mb-12">
+                        <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
+                            Frontend vs. Backend
+                        </h1>
+                        <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                            Explore os dois lados da moeda do desenvolvimento web. Entenda suas responsabilidades, tecnologias e como eles colaboram para criar aplicações incríveis.
+                        </p>
+                    </div>
                     <Button size="lg" onClick={() => setIsExploring(true)}>
                         Começar a Explorar
                         <ArrowDown className="ml-2" />
                     </Button>
                 </div>
+            ) : (
+                <>
+                 <div className="mb-12 text-center">
+                    <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
+                        Frontend vs. Backend
+                    </h1>
+                    <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                        Explore os dois lados da moeda do desenvolvimento web. Entenda suas responsabilidades, tecnologias e como eles colaboram para criar aplicações incríveis.
+                    </p>
+                    </div>
+                    <MainContent />
+                </>
             )}
-
-            {isExploring && <MainContent />}
 
           </div>
         </main>
