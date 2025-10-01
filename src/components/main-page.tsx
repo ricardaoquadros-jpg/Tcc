@@ -72,7 +72,7 @@ export default function MainPage() {
           <div className="container py-8 md:py-12">
             
             {!isExploring ? (
-                <div className="flex flex-col items-center justify-center py-16 text-center">
+                <div className="flex flex-col items-center justify-center text-center" style={{ minHeight: 'calc(100vh - 12rem)'}}>
                     <div className="mb-12">
                         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
                             Frontend vs. Backend
@@ -87,17 +87,7 @@ export default function MainPage() {
                     </Button>
                 </div>
             ) : (
-                <>
-                 <div className="mb-12 text-center">
-                    <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
-                        Frontend vs. Backend
-                    </h1>
-                    <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-                        Explore os dois lados da moeda do desenvolvimento web. Entenda suas responsabilidades, tecnologias e como eles colaboram para criar aplicações incríveis.
-                    </p>
-                    </div>
-                    <MainContent />
-                </>
+                <MainContent />
             )}
 
           </div>
