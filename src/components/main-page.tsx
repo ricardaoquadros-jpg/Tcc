@@ -12,12 +12,6 @@ import { Button } from './ui/button';
 import { ArrowDown } from 'lucide-react';
 
 function MainContent() {
-    const handleScroll = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
     return (
         <>
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
@@ -35,13 +29,6 @@ function MainContent() {
                     technologies={backendTechnologies}
                     accentColor="backend"
                 />
-            </div>
-
-            <div className="mt-16 text-center">
-                <Button size="lg" onClick={() => handleScroll('more-content')}>
-                    <ArrowDown className="mr-2" />
-                    Continue Explorando
-                </Button>
             </div>
             
             <div id="more-content" className="mt-20 pt-4">
