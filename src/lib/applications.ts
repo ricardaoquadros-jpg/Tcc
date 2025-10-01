@@ -128,7 +128,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Shopify',
-    logo: 'https://picsum.photos/seed/shopify/100/100',
+    logo: 'https://i.imgur.com/Q32Ubog.png',
     description: 'Plataforma de e-commerce que permite a criação de lojas virtuais.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -515,6 +515,8 @@ export const applications: Application[] = [
     ),
   }
 ];
+
+    
 
     
 
