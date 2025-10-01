@@ -107,7 +107,7 @@ export const jobRoles: JobRole[] = [
       },
       {
         name: 'Apple',
-        logo: 'https://picsum.photos/seed/apple/100/100',
+        logo: 'https://i.imgur.com/CeqDbf6.png',
         technologies: getTechs('Scala', 'Cassandra', 'Java', 'PostgreSQL'),
       },
     ],

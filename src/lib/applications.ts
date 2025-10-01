@@ -116,7 +116,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Apple',
-    logo: 'https://picsum.photos/seed/apple/100/100',
+    logo: 'https://i.imgur.com/CeqDbf6.png',
     description: 'Uma das empresas mais valiosas do mundo, criadora do iPhone.',
     technologies: getTechs(
       getTech('Svelte', 'Frontend'), // Apple Music
