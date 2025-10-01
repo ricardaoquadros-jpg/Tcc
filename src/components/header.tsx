@@ -14,6 +14,7 @@ type HeaderProps = {
 
 const navLinks = [
     { href: '#tech-comparison', label: 'Tecnologias' },
+    { href: '#applications', label: 'Aplicações' },
     { href: '#job-roles', label: 'Áreas de Trabalho' },
     { href: '#ai-explainer', label: 'Explicação com IA' },
 ]
@@ -37,7 +38,7 @@ export function Header({ userName, isExploring }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6" style={{ minWidth: '200px'}}>
           <div className="hidden items-center md:flex">
             <FXBLogo className="mr-2 h-8 w-8 text-foreground" />
             <span className="font-headline text-xl font-bold">Front x Back</span>

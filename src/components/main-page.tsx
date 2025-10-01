@@ -10,6 +10,7 @@ import { FXBLogo } from './icons/fxb-logo';
 import { JobRolesSection } from './job-roles-section';
 import { Button } from './ui/button';
 import { ArrowDown } from 'lucide-react';
+import { ApplicationsSection } from './applications-section';
 
 function MainContent() {
     return (
@@ -31,6 +32,7 @@ function MainContent() {
                 />
             </section>
             
+            <ApplicationsSection />
             <JobRolesSection />
             <AiExplainer />
         </div>
@@ -94,7 +96,7 @@ export default function MainPage() {
                 </Button>
             </div>
 
-            <MainContent />
+            {isExploring && <MainContent />}
 
           </div>
         </main>
