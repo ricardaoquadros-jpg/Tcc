@@ -153,7 +153,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Figma',
-    logo: 'https://picsum.photos/seed/figma/100/100',
+    logo: 'https://i.imgur.com/UIwvlFN.png',
     description: 'Ferramenta de design de interface colaborativa baseada na web.',
     technologies: getTechs(
         getTech('React', 'Frontend'),
