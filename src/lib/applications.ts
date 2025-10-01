@@ -214,7 +214,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Airbnb',
-    logo: 'https://picsum.photos/seed/airbnb/100/100',
+    logo: 'https://i.imgur.com/rz3WA5w.png',
     description: 'Mercado online para aluguel de acomodações.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -226,7 +226,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Pinterest',
-    logo: 'https://picsum.photos/seed/pinterest/100/100',
+    logo: 'https://i.imgur.com/qOE40wJ.png',
     description: 'Rede social para descoberta visual e compartilhamento de imagens.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -523,4 +523,5 @@ export const applications: Application[] = [
     
 
     
+
 
