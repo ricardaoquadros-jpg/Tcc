@@ -13,7 +13,7 @@ import { ArrowDown } from 'lucide-react';
 
 function MainContent() {
     return (
-        <>
+        <div id="main-content-container" className="pt-16">
             <section id="tech-comparison" className="grid scroll-mt-20 grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
                 <DevCategoryCard
                     key="frontend"
@@ -33,7 +33,7 @@ function MainContent() {
             
             <JobRolesSection />
             <AiExplainer />
-        </>
+        </div>
     )
 }
 
@@ -94,9 +94,7 @@ export default function MainPage() {
                 </Button>
             </div>
 
-            <div id="main-content-container">
-                <MainContent />
-            </div>
+            <MainContent />
 
           </div>
         </main>
