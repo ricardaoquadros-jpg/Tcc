@@ -34,6 +34,20 @@ const INITIAL_VISIBLE_TECHS = 4;
 type SortOption = 'default' | 'difficulty-asc' | 'popularity-desc';
 type FilterOption = 'all' | Technology['type'];
 
+const pluralize = (word: string, count: number) => {
+  if (count === 1) {
+    if (word === 'Ferramenta') return 'Ferramenta';
+    if (word === 'Plataforma') return 'Plataforma';
+    if (word === 'Biblioteca') return 'Biblioteca';
+    if (word === 'Linguagem') return 'Linguagem';
+  }
+  if (word.endsWith('m')) {
+    return word.slice(0, -1) + 'ns';
+  }
+  return word + 's';
+}
+
+
 export function DevCategoryCard({
   title,
   description,
@@ -78,27 +92,12 @@ export function DevCategoryCard({
     ? filteredAndSortedTechnologies
     : filteredAndSortedTechnologies.slice(0, INITIAL_VISIBLE_TECHS);
 
-  const typeCounts = useMemo(() => {
-    return technologies.reduce((acc, tech) => {
+  const countsString = useMemo(() => {
+    const typeCounts = technologies.reduce((acc, tech) => {
       acc[tech.type] = (acc[tech.type] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
-  }, [technologies]);
 
-  const pluralize = (word: string, count: number) => {
-    if (count === 1) {
-      if (word === 'Ferramenta') return 'Ferramenta';
-      if (word === 'Plataforma') return 'Plataforma';
-      if (word === 'Biblioteca') return 'Biblioteca';
-      if (word === 'Linguagem') return 'Linguagem';
-    }
-    if (word.endsWith('m')) {
-      return word.slice(0, -1) + 'ns';
-    }
-    return word + 's';
-  }
-
-  const countsString = useMemo(() => {
     const order: Technology['type'][] = ['Framework', 'Linguagem', 'Biblioteca', 'Ferramenta', 'Plataforma'];
     const parts = order
       .filter(type => typeCounts[type])
@@ -110,7 +109,7 @@ export function DevCategoryCard({
     const lastPart = parts.pop();
     return `(${parts.join(', ')} e ${lastPart})`;
 
-  }, [typeCounts]);
+  }, [technologies]);
 
   return (
     <Card className="flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
