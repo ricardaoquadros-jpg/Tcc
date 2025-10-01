@@ -19,6 +19,16 @@ import {
   PinterestIcon,
   SpotifyIcon,
   TrelloIcon,
+  MicrosoftIcon,
+  WikipediaIcon,
+  WordPressIcon,
+  RedditIcon,
+  TikTokIcon,
+  ZoomIcon,
+  SalesforceIcon,
+  EbayIcon,
+  StripeIcon,
+  PaypalIcon,
 } from '@/components/icons';
 
 type AppTechnology = {
@@ -273,6 +283,120 @@ export const applications: Application[] = [
       getTech('Java', 'Backend'),
       getTech('Kotlin', 'Backend'),
       getTech('PostgreSQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Microsoft',
+    logo: MicrosoftIcon,
+    description: 'Gigante global de software, criadora do Windows e Office.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('TypeScript', 'Frontend'),
+      getTech('C#', 'Backend'),
+      getTech('ASP.NET Core', 'Backend'),
+      getTech('SQL Server', 'Backend')
+    ),
+  },
+  {
+    name: 'Wikipedia',
+    logo: WikipediaIcon,
+    description: 'A maior enciclopédia online livre e colaborativa do mundo.',
+    technologies: getTechs(
+      getTech('JavaScript', 'Frontend'),
+      getTech('PHP', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'WordPress',
+    logo: WordPressIcon,
+    description: 'O sistema de gerenciamento de conteúdo (CMS) mais popular do mundo.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('JavaScript', 'Frontend'),
+      getTech('PHP', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Reddit',
+    logo: RedditIcon,
+    description: 'Uma vasta rede de comunidades baseadas nos interesses das pessoas.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Python', 'Backend'),
+      getTech('Go', 'Backend'),
+      getTech('PostgreSQL', 'Backend'),
+      getTech('Cassandra', 'Backend')
+    ),
+  },
+  {
+    name: 'TikTok',
+    logo: TikTokIcon,
+    description: 'Plataforma de vídeos curtos que se tornou um fenômeno global.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Next.js', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Go', 'Backend'),
+      getTech('Python', 'Backend')
+    ),
+  },
+  {
+    name: 'Zoom',
+    logo: ZoomIcon,
+    description: 'Plataforma líder de videoconferência e comunicação por vídeo.',
+    technologies: getTechs(
+      getTech('Angular', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('C#', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Salesforce',
+    logo: SalesforceIcon,
+    description: 'Plataforma de CRM nº 1 do mundo para vendas, serviços e marketing.',
+    technologies: getTechs(
+      getTech('JavaScript', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Oracle DB', 'Backend'),
+      getTech('PostgreSQL', 'Backend')
+    ),
+  },
+  {
+    name: 'eBay',
+    logo: EbayIcon,
+    description: 'Um dos maiores mercados online do mundo para leilões e vendas.',
+    technologies: getTechs(
+      getTech('JavaScript', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Node.js', 'Backend'),
+      getTech('Oracle DB', 'Backend')
+    ),
+  },
+  {
+    name: 'Stripe',
+    logo: StripeIcon,
+    description: 'Plataforma de processamento de pagamentos para negócios online.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Ruby', 'Backend'),
+      getTech('Go', 'Backend'),
+      getTech('Scala', 'Backend'),
+      getTech('MongoDB', 'Backend')
+    ),
+  },
+  {
+    name: 'PayPal',
+    logo: PaypalIcon,
+    description: 'Sistema de pagamento online que atua como alternativa aos métodos tradicionais.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Node.js', 'Backend'),
+      getTech('Java', 'Backend'),
+      getTech('Python', 'Backend'),
+      getTech('MySQL', 'Backend')
     ),
   }
 ];
