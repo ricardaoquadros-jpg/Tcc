@@ -4,12 +4,21 @@ import { FXBLogo } from '@/components/icons/fxb-logo';
 import { Button } from './ui/button';
 import { useRouter } from 'next/navigation';
 import { LogOut } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 type HeaderProps = {
   userName: string;
+  isExploring: boolean;
 };
 
-export function Header({ userName }: HeaderProps) {
+const navLinks = [
+    { href: '#tech-comparison', label: 'Tecnologias' },
+    { href: '#job-roles', label: 'Áreas de Trabalho' },
+    { href: '#ai-explainer', label: 'Explicação com IA' },
+]
+
+export function Header({ userName, isExploring }: HeaderProps) {
   const router = useRouter();
 
   const handleLogout = () => {
@@ -17,13 +26,37 @@ export function Header({ userName }: HeaderProps) {
     router.push('/login');
   };
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <div className="mr-4 flex items-center">
+        <div className="mr-4 hidden items-center md:flex">
           <FXBLogo className="mr-2 h-8 w-8 text-foreground" />
           <span className="font-headline text-xl font-bold">Front x Back</span>
         </div>
+        
+        {isExploring && (
+             <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+                {navLinks.map(link => (
+                    <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={handleScroll}
+                        className="text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                        {link.label}
+                    </Link>
+                ))}
+            </nav>
+        )}
+
         <div className="flex flex-1 items-center justify-end space-x-4">
           <span className="hidden text-sm text-muted-foreground sm:inline">
             Bem-vindo,{' '}

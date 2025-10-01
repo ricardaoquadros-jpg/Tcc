@@ -64,7 +64,7 @@ export function AiExplainer() {
   }
 
   return (
-    <section className="mt-12 w-full lg:mt-16">
+    <section id="ai-explainer" className="mt-12 w-full scroll-mt-20 lg:mt-16">
       <Card className="bg-gradient-to-br from-card to-secondary/30">
         <CardHeader>
           <div className="flex items-center gap-3">

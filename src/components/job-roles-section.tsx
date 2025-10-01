@@ -9,7 +9,7 @@ export function JobRolesSection() {
     const backendRoles = jobRoles.filter(role => role.area === 'Backend');
 
     return (
-        <section className="mt-12 w-full lg:mt-16">
+        <section id="job-roles" className="mt-12 w-full scroll-mt-20 lg:mt-16">
             <div className="mb-10 text-center">
                 <div className="inline-flex items-center justify-center gap-3">
                     <Briefcase className="h-8 w-8 text-primary" />
