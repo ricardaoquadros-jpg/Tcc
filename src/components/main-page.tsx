@@ -13,8 +13,8 @@ import { ArrowDown } from 'lucide-react';
 
 function MainContent() {
     return (
-        <div id="main-content-container" className="pt-16">
-            <section id="tech-comparison" className="grid scroll-mt-20 grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+        <div id="main-content-container" className="pt-8">
+            <section id="tech-comparison" className="grid scroll-mt-20 grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start pt-16">
                 <DevCategoryCard
                     key="frontend"
                     title="Frontend"
@@ -79,7 +79,7 @@ export default function MainPage() {
         <main className="flex-1">
           <div className="container py-8 md:py-12">
             
-            <div className="flex flex-col items-center justify-center text-center" style={{ minHeight: 'calc(100vh - 12rem)'}}>
+            <div className="flex flex-col items-center justify-center text-center" style={{ minHeight: 'calc(100vh - 8rem)'}}>
                 <div className="mb-12">
                     <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl font-headline">
                         Frontend vs. Backend
