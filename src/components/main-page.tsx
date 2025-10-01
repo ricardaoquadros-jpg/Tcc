@@ -12,9 +12,51 @@ import { Button } from './ui/button';
 import { ArrowDown, Briefcase, Sparkles } from 'lucide-react';
 import { Separator } from './ui/separator';
 
+function MainContent() {
+    const handleScroll = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+    return (
+        <>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
+                <DevCategoryCard
+                    key="frontend"
+                    title="Frontend"
+                    description="O frontend é a parte da aplicação com a qual o usuário interage diretamente. É tudo o que você vê na tela: o layout, os botões, as cores e as animações. O objetivo do desenvolvedor frontend é criar uma experiência de usuário (UX) rica e intuitiva."
+                    technologies={frontendTechnologies}
+                    accentColor="frontend"
+                />
+                <DevCategoryCard
+                    key="backend"
+                    title="Backend"
+                    description="O backend é o que acontece nos bastidores. Ele gerencia a lógica do servidor, o banco de dados, a autenticação de usuários e as APIs. O desenvolvedor backend garante que tudo funcione de forma segura e eficiente, fornecendo os dados que o frontend exibe."
+                    technologies={backendTechnologies}
+                    accentColor="backend"
+                />
+            </div>
+
+            <div className="mt-16 text-center">
+                <Button size="lg" onClick={() => handleScroll('more-content')}>
+                    <ArrowDown className="mr-2" />
+                    Continue Explorando
+                </Button>
+            </div>
+            
+            <div id="more-content" className="mt-20 pt-4">
+              <JobRolesSection />
+              <AiExplainer />
+            </div>
+        </>
+    )
+}
+
 export default function MainPage() {
   const [userName, setUserName] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isExploring, setIsExploring] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -38,13 +80,6 @@ export default function MainPage() {
     );
   }
 
-  const handleScroll = () => {
-    const nextSection = document.getElementById('more-content');
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     userName && (
       <div className="flex min-h-screen flex-col">
@@ -59,35 +94,18 @@ export default function MainPage() {
                 Explore os dois lados da moeda do desenvolvimento web. Entenda suas responsabilidades, tecnologias e como eles colaboram para criar aplicações incríveis.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
-              <DevCategoryCard
-                key="frontend"
-                title="Frontend"
-                description="O frontend é a parte da aplicação com a qual o usuário interage diretamente. É tudo o que você vê na tela: o layout, os botões, as cores e as animações. O objetivo do desenvolvedor frontend é criar uma experiência de usuário (UX) rica e intuitiva."
-                technologies={frontendTechnologies}
-                accentColor="frontend"
-              />
-              <DevCategoryCard
-                key="backend"
-                title="Backend"
-                description="O backend é o que acontece nos bastidores. Ele gerencia a lógica do servidor, o banco de dados, a autenticação de usuários e as APIs. O desenvolvedor backend garante que tudo funcione de forma segura e eficiente, fornecendo os dados que o frontend exibe."
-                technologies={backendTechnologies}
-                accentColor="backend"
-              />
-            </div>
-
-            <div className="mt-16 text-center">
-                <Button size="lg" onClick={handleScroll}>
-                    <ArrowDown className="mr-2" />
-                    Continue Explorando
-                </Button>
-            </div>
             
-            <div id="more-content" className="mt-20 pt-4">
-              <JobRolesSection />
-              <AiExplainer />
-            </div>
+            {!isExploring && (
+                <div className="mt-16 text-center">
+                    <Button size="lg" onClick={() => setIsExploring(true)}>
+                        Começar a Explorar
+                        <ArrowDown className="ml-2" />
+                    </Button>
+                </div>
+            )}
+
+            {isExploring && <MainContent />}
+
           </div>
         </main>
       </div>
