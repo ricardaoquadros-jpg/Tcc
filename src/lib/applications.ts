@@ -75,7 +75,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Google',
-    logo: 'https://picsum.photos/seed/google/100/100',
+    logo: 'https://i.imgur.com/xSoDTYn.png',
     description: 'O maior motor de busca do mundo e gigante de tecnologia.',
     technologies: getTechs(
       getTech('Angular', 'Frontend'),
@@ -439,7 +439,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Google Maps',
-    logo: 'https://picsum.photos/seed/gmaps/100/100',
+    logo: 'https://i.imgur.com/xSoDTYn.png',
     description: 'Serviço de pesquisa e visualização de mapas e imagens de satélite.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),

@@ -66,7 +66,7 @@ export const jobRoles: JobRole[] = [
       },
       {
         name: 'Google',
-        logo: 'https://picsum.photos/seed/google/100/100',
+        logo: 'https://i.imgur.com/xSoDTYn.png',
         technologies: getTechs('Angular', 'TypeScript', 'Dart', 'Firebase'),
       },
       {
@@ -102,7 +102,7 @@ export const jobRoles: JobRole[] = [
       },
       {
         name: 'Google',
-        logo: 'https://picsum.photos/seed/google/100/100',
+        logo: 'https://i.imgur.com/xSoDTYn.png',
         technologies: getTechs('Go', 'Python', 'Kubernetes', 'gRPC'),
       },
       {
