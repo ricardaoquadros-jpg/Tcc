@@ -8,6 +8,9 @@ import { frontendTechnologies, backendTechnologies } from '@/lib/constants';
 import { AiExplainer } from './ai-explainer';
 import { FXBLogo } from './icons/fxb-logo';
 import { JobRolesSection } from './job-roles-section';
+import { Button } from './ui/button';
+import { ArrowDown, Briefcase, Sparkles } from 'lucide-react';
+import { Separator } from './ui/separator';
 
 export default function MainPage() {
   const [userName, setUserName] = useState<string | null>(null);
@@ -35,6 +38,13 @@ export default function MainPage() {
     );
   }
 
+  const handleScroll = () => {
+    const nextSection = document.getElementById('more-content');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     userName && (
       <div className="flex min-h-screen flex-col">
@@ -50,7 +60,7 @@ export default function MainPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-start">
               <DevCategoryCard
                 key="frontend"
                 title="Frontend"
@@ -66,9 +76,18 @@ export default function MainPage() {
                 accentColor="backend"
               />
             </div>
+
+            <div className="mt-16 text-center">
+                <Button size="lg" onClick={handleScroll}>
+                    <ArrowDown className="mr-2" />
+                    Continue Explorando
+                </Button>
+            </div>
             
-            <JobRolesSection />
-            <AiExplainer />
+            <div id="more-content" className="mt-20 pt-4">
+              <JobRolesSection />
+              <AiExplainer />
+            </div>
           </div>
         </main>
       </div>
