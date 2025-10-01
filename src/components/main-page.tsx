@@ -50,7 +50,7 @@ export default function MainPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start">
               <DevCategoryCard
                 key="frontend"
                 title="Frontend"
