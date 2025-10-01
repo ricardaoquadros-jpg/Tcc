@@ -1,11 +1,19 @@
 
 "use client"
 
+import { useState } from "react";
 import { applications } from "@/lib/applications";
 import { ApplicationCard } from "./application-card";
-import { AppWindow } from "lucide-react";
+import { AppWindow, ChevronDown, ChevronUp } from "lucide-react";
+import { Button } from "./ui/button";
+
+const INITIAL_VISIBLE_APPS = 6;
 
 export function ApplicationsSection() {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const visibleApplications = isExpanded ? applications : applications.slice(0, INITIAL_VISIBLE_APPS);
+
     return (
         <section id="applications" className="mt-12 w-full scroll-mt-20 lg:mt-16">
             <div className="mb-10 text-center">
@@ -21,10 +29,26 @@ export function ApplicationsSection() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {applications.map(app => (
+                {visibleApplications.map(app => (
                     <ApplicationCard key={app.name} application={app} />
                 ))}
             </div>
+
+            {applications.length > INITIAL_VISIBLE_APPS && (
+                <div className="mt-6 text-center">
+                    <Button
+                        variant="outline"
+                        onClick={() => setIsExpanded(!isExpanded)}
+                    >
+                        {isExpanded ? 'Ver menos' : 'Ver mais'}
+                        {isExpanded ? (
+                            <ChevronUp className="ml-2 h-4 w-4" />
+                        ) : (
+                            <ChevronDown className="ml-2 h-4 w-4" />
+                        )}
+                    </Button>
+                </div>
+            )}
         </section>
     );
 }
