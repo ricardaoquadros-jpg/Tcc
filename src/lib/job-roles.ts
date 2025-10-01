@@ -13,10 +13,11 @@ import {
   NetflixLogo,
   AmazonLogo,
 } from '@/components/icons';
+import type { ComponentType, SVGProps } from 'react';
 
 type Company = {
   name: string;
-  logo: string;
+  logo: string | ComponentType<SVGProps<SVGSVGElement>>;
   technologies: Technology[];
 };
 
@@ -70,7 +71,7 @@ export const jobRoles: JobRole[] = [
       },
       {
         name: 'Netflix',
-        logo: 'https://picsum.photos/seed/netflix/100/100',
+        logo: NetflixLogo,
         technologies: getTechs('React', 'TypeScript', 'Redux', 'GraphQL'),
       },
     ],
@@ -132,7 +133,7 @@ export const jobRoles: JobRole[] = [
     companies: [
       {
         name: 'Netflix',
-        logo: 'https://picsum.photos/seed/netflix/100/100',
+        logo: NetflixLogo,
         technologies: getTechs('Node.js', 'React', 'Java', 'GraphQL'),
       },
       {

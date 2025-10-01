@@ -7,10 +7,19 @@ import { ArrowRight, CheckCircle2, DollarSign, ExternalLink } from "lucide-react
 import Link from "next/link";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 import Image from 'next/image';
+import type { ComponentType, SVGProps } from "react";
 
 type JobRoleCardProps = {
     role: JobRole;
 };
+
+function Logo({ logo, name }: { logo: string | ComponentType<SVGProps<SVGSVGElement>>, name: string }) {
+    if (typeof logo === 'string') {
+        return <Image src={logo} alt={`${name} logo`} width={40} height={40} className="object-cover" />
+    }
+    const Icon = logo;
+    return <Icon className="h-7 w-7" />
+}
 
 export function JobRoleCard({ role }: JobRoleCardProps) {
 
@@ -43,7 +52,7 @@ export function JobRoleCard({ role }: JobRoleCardProps) {
                         {role.companies.map((company) => (
                             <div key={company.name} className="flex items-start gap-4">
                                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-muted border overflow-hidden">
-                                     <Image src={company.logo} alt={`${company.name} logo`} width={40} height={40} className="object-cover" />
+                                     <Logo logo={company.logo} name={company.name} />
                                 </div>
                                 <div className="flex-grow">
                                     <p className="font-medium text-foreground/90">{company.name}</p>

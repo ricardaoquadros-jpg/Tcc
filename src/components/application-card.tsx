@@ -69,6 +69,22 @@ function TechExplanation({ appName, tech }: { appName: string, tech: Technology 
     )
 }
 
+function Logo({ logo, name }: { logo: Application['logo'], name: string }) {
+    if (typeof logo === 'string') {
+        return <Image src={logo} alt={`${name} logo`} width={48} height={48} className="object-cover" />
+    }
+    const Icon = logo;
+    return <Icon className="h-8 w-8" />
+}
+
+function DialogLogo({ logo, name }: { logo: Application['logo'], name: string }) {
+    if (typeof logo === 'string') {
+        return <Image src={logo} alt={`${name} logo`} width={64} height={64} className="object-cover" />
+    }
+    const Icon = logo;
+    return <Icon className="h-10 w-10" />
+}
+
 export function ApplicationCard({ application }: ApplicationCardProps) {
     const frontendTechs = application.technologies.filter(t => t.area === 'Frontend');
     const backendTechs = application.technologies.filter(t => t.area === 'Backend');
@@ -79,7 +95,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                 <Card className="flex flex-col h-full hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-pointer">
                     <CardHeader className="flex-row items-center gap-4">
                         <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-muted border overflow-hidden">
-                             <Image src={application.logo} alt={`${application.name} logo`} width={48} height={48} className="object-cover" />
+                             <Logo logo={application.logo} name={application.name} />
                         </div>
                         <div>
                             <CardTitle className="font-headline text-xl">{application.name}</CardTitle>
@@ -135,7 +151,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <DialogContent className="max-w-3xl">
                 <DialogHeader className="flex-row items-center gap-4">
                     <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-muted border overflow-hidden">
-                        <Image src={application.logo} alt={`${application.name} logo`} width={64} height={64} className="object-cover" />
+                        <DialogLogo logo={application.logo} name={application.name} />
                     </div>
                     <div>
                         <DialogTitle className="font-headline text-2xl">Stack de Tecnologias do {application.name}</DialogTitle>

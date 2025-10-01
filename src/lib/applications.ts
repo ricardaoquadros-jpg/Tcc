@@ -34,6 +34,7 @@ import {
   DropboxIcon,
   NotionIcon,
 } from '@/components/icons';
+import type { ComponentType, SVGProps } from 'react';
 
 type AppTechnology = {
   tech: Technology;
@@ -42,7 +43,7 @@ type AppTechnology = {
 
 export interface Application {
   name: string;
-  logo: string;
+  logo: string | ComponentType<SVGProps<SVGSVGElement>>;
   description: string;
   technologies: AppTechnology[];
 }
@@ -60,7 +61,7 @@ function getTechs(...techs: (AppTechnology | null)[]): AppTechnology[] {
 export const applications: Application[] = [
   {
     name: 'Netflix',
-    logo: 'https://picsum.photos/seed/netflix/100/100',
+    logo: NetflixLogo,
     description: 'Plataforma líder de streaming de filmes e séries.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
