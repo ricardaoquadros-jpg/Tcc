@@ -61,7 +61,7 @@ export const jobRoles: JobRole[] = [
     companies: [
       {
         name: 'Meta',
-        logo: 'https://picsum.photos/seed/meta/100/100',
+        logo: 'https://i.imgur.com/ko4TgwK.png',
         technologies: getTechs('React', 'JavaScript', 'GraphQL', 'Jest'),
       },
       {
@@ -143,7 +143,7 @@ export const jobRoles: JobRole[] = [
       },
       {
         name: 'Meta',
-        logo: 'https://picsum.photos/seed/meta/100/100',
+        logo: 'https://i.imgur.com/ko4TgwK.png',
         technologies: getTechs('React', 'PHP', 'Python', 'MySQL'),
       },
     ],

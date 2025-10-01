@@ -89,7 +89,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Meta (Facebook)',
-    logo: 'https://picsum.photos/seed/meta/100/100',
+    logo: 'https://i.imgur.com/ko4TgwK.png',
     description: 'A maior rede social do mundo e um conglomerado de tecnologia.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -406,7 +406,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Instagram',
-    logo: 'https://picsum.photos/seed/instagram/100/100',
+    logo: 'https://i.imgur.com/ko4TgwK.png',
     description: 'Rede social de compartilhamento de fotos e vídeos.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -417,7 +417,7 @@ export const applications: Application[] = [
   },
   {
     name: 'WhatsApp',
-    logo: 'https://picsum.photos/seed/whatsapp/100/100',
+    logo: 'https://i.imgur.com/ko4TgwK.png',
     description: 'Aplicativo de mensagens instantâneas para smartphones.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -428,7 +428,7 @@ export const applications: Application[] = [
   },
   {
     name: 'YouTube',
-    logo: 'https://picsum.photos/seed/youtube/100/100',
+    logo: 'https://i.imgur.com/xSoDTYn.png',
     description: 'A maior plataforma de compartilhamento de vídeos do mundo.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -472,7 +472,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Facebook Messenger',
-    logo: 'https://picsum.photos/seed/messenger/100/100',
+    logo: 'https://i.imgur.com/ko4TgwK.png',
     description: 'Serviço de mensagens instantâneas integrado ao Facebook.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
