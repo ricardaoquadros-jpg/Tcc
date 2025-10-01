@@ -88,13 +88,6 @@ import {
   SqlServerIcon,
   PowerBiIcon,
   TableauIcon,
-  ShopifyIcon,
-  DiscordIcon,
-  FigmaIcon,
-  SlackIcon,
-  TwitchIcon,
-  TwitterIcon,
-  UberIcon
 } from '@/components/icons';
 import type { ComponentType } from 'react';
 
@@ -615,13 +608,6 @@ export const frontendTechnologies: Technology[] = [
     difficulty: 3.0,
     popularity: 8.2,
   },
-  { name: 'Shopify', icon: ShopifyIcon, description: '', type: 'Ferramenta', difficulty: 0, popularity: 0 },
-  { name: 'Discord', icon: DiscordIcon, description: '', type: 'Ferramenta', difficulty: 0, popularity: 0 },
-  { name: 'Figma', icon: FigmaIcon, description: '', type: 'Ferramenta', difficulty: 0, popularity: 0 },
-  { name: 'Slack', icon: SlackIcon, description: '', type: 'Ferramenta', difficulty: 0, popularity: 0 },
-  { name: 'Twitch', icon: TwitchIcon, description: '', type: 'Ferramenta', difficulty: 0, popularity: 0 },
-  { name: 'Twitter', icon: TwitterIcon, description: '', type: 'Ferramenta', difficulty: 0, popularity: 0 },
-  { name: 'Uber', icon: UberIcon, description: '', type: 'Ferramenta', difficulty: 0, popularity: 0 },
 ];
 
 export const backendTechnologies: Technology[] = [

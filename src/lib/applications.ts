@@ -11,7 +11,14 @@ import {
   SlackIcon,
   TwitchIcon,
   TwitterIcon,
-  UberIcon
+  UberIcon,
+  AirbnbIcon,
+  AtlassianIcon,
+  GithubIcon,
+  LinkedinIcon,
+  PinterestIcon,
+  SpotifyIcon,
+  TrelloIcon,
 } from '@/components/icons';
 
 type AppTechnology = {
@@ -153,6 +160,119 @@ export const applications: Application[] = [
         getTech('MySQL', 'Backend'),
         getTech('PostgreSQL', 'Backend'),
         getTech('Redis', 'Backend')
+    ),
+  },
+  {
+    name: 'Slack',
+    logo: SlackIcon,
+    description: 'Plataforma de mensagens para equipes e colaboração.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('JavaScript', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('PHP', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Twitter (X)',
+    logo: TwitterIcon,
+    description: 'Rede social para compartilhamento de mensagens curtas.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Scala', 'Backend'),
+      getTech('Java', 'Backend'),
+      getTech('MySQL', 'Backend'),
+      getTech('Redis', 'Backend')
+    ),
+  },
+  {
+    name: 'Twitch',
+    logo: TwitchIcon,
+    description: 'Plataforma de streaming ao vivo, focada em videogames.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Ember.js', 'Frontend'),
+      getTech('Go', 'Backend'),
+      getTech('PostgreSQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Airbnb',
+    logo: AirbnbIcon,
+    description: 'Mercado online para aluguel de acomodações.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Ruby on Rails', 'Backend'),
+      getTech('Java', 'Backend'),
+      getTech('MySQL', 'Backend'),
+      getTech('Redis', 'Backend')
+    ),
+  },
+  {
+    name: 'Pinterest',
+    logo: PinterestIcon,
+    description: 'Rede social para descoberta visual e compartilhamento de imagens.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Django', 'Backend'),
+      getTech('Python', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'LinkedIn',
+    logo: LinkedinIcon,
+    description: 'A maior rede profissional do mundo.',
+    technologies: getTechs(
+      getTech('Ember.js', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Scala', 'Backend'),
+      getTech('Apache Kafka', 'Backend')
+    ),
+  },
+  {
+    name: 'Spotify',
+    logo: SpotifyIcon,
+    description: 'Serviço de streaming de música, podcasts e vídeos.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Python', 'Backend'),
+      getTech('Java', 'Backend'),
+      getTech('PostgreSQL', 'Backend'),
+      getTech('Cassandra', 'Backend')
+    ),
+  },
+  {
+    name: 'Trello',
+    logo: TrelloIcon,
+    description: 'Ferramenta de gerenciamento de projetos no estilo Kanban.',
+    technologies: getTechs(
+      getTech('Backbone.js', 'Frontend'),
+      getTech('Node.js', 'Backend'),
+      getTech('MongoDB', 'Backend')
+    ),
+  },
+  {
+    name: 'GitHub',
+    logo: GithubIcon,
+    description: 'Plataforma de hospedagem de código e colaboração.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Ruby on Rails', 'Backend'),
+      getTech('Go', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Atlassian (Jira)',
+    logo: AtlassianIcon,
+    description: 'Ferramenta líder para rastreamento de bugs e gerenciamento de projetos ágeis.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Kotlin', 'Backend'),
+      getTech('PostgreSQL', 'Backend')
     ),
   }
 ];
