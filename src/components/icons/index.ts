@@ -117,3 +117,6 @@ export * from './salesforce-icon';
 export * from './ebay-icon';
 export * from './stripe-icon';
 export * from './paypal-icon';
+export * from './canva-icon';
+export * from './dropbox-icon';
+export * from './notion-icon';

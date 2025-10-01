@@ -29,6 +29,9 @@ import {
   EbayIcon,
   StripeIcon,
   PaypalIcon,
+  CanvaIcon,
+  DropboxIcon,
+  NotionIcon,
 } from '@/components/icons';
 
 type AppTechnology = {
@@ -397,6 +400,116 @@ export const applications: Application[] = [
       getTech('Java', 'Backend'),
       getTech('Python', 'Backend'),
       getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Instagram',
+    logo: MetaLogo,
+    description: 'Rede social de compartilhamento de fotos e vídeos.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Python', 'Backend'),
+      getTech('Django', 'Backend'),
+      getTech('PostgreSQL', 'Backend')
+    ),
+  },
+  {
+    name: 'WhatsApp',
+    logo: MetaLogo,
+    description: 'Aplicativo de mensagens instantâneas para smartphones.',
+    technologies: getTechs(
+      getTech('JavaScript', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('FreeBSD', 'Backend'),
+      getTech('PostgreSQL', 'Backend')
+    ),
+  },
+  {
+    name: 'YouTube',
+    logo: GoogleLogo,
+    description: 'A maior plataforma de compartilhamento de vídeos do mundo.',
+    technologies: getTechs(
+      getTech('JavaScript', 'Frontend'),
+      getTech('Go', 'Backend'),
+      getTech('Python', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Google Maps',
+    logo: GoogleLogo,
+    description: 'Serviço de pesquisa e visualização de mapas e imagens de satélite.',
+    technologies: getTechs(
+      getTech('JavaScript', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Python', 'Backend'),
+      getTech('C#', 'Backend')
+    ),
+  },
+  {
+    name: 'Amazon Web Services',
+    logo: AmazonLogo,
+    description: 'Plataforma de serviços de computação em nuvem, segura e sob demanda.',
+    technologies: getTechs(
+      getTech('Angular', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Go', 'Backend'),
+      getTech('Rust', 'Backend')
+    ),
+  },
+  {
+    name: 'Microsoft Office 365',
+    logo: MicrosoftIcon,
+    description: 'Conjunto de aplicativos de produtividade em nuvem, como Word e Excel.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('C#', 'Backend'),
+      getTech('ASP.NET Core', 'Backend'),
+      getTech('SQL Server', 'Backend')
+    ),
+  },
+  {
+    name: 'Facebook Messenger',
+    logo: MetaLogo,
+    description: 'Serviço de mensagens instantâneas integrado ao Facebook.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('JavaScript', 'Frontend'),
+      getTech('PHP', 'Backend'),
+      getTech('Java', 'Backend')
+    ),
+  },
+  {
+    name: 'Canva',
+    logo: CanvaIcon,
+    description: 'Plataforma de design gráfico que permite aos usuários criar gráficos e outros conteúdos visuais.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Java', 'Backend'),
+      getTech('Node.js', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Dropbox',
+    logo: DropboxIcon,
+    description: 'Serviço de armazenamento de arquivos em nuvem e sincronização.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Go', 'Backend'),
+      getTech('Python', 'Backend'),
+      getTech('Rust', 'Backend'),
+      getTech('MySQL', 'Backend')
+    ),
+  },
+  {
+    name: 'Notion',
+    logo: NotionIcon,
+    description: 'Aplicativo de produtividade que oferece um espaço de trabalho tudo-em-um.',
+    technologies: getTechs(
+      getTech('React', 'Frontend'),
+      getTech('Node.js', 'Backend'),
+      getTech('PostgreSQL', 'Backend')
     ),
   }
 ];
