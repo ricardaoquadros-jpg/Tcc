@@ -36,28 +36,32 @@ export function Header({ userName, isExploring }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 hidden items-center md:flex">
-          <FXBLogo className="mr-2 h-8 w-8 text-foreground" />
-          <span className="font-headline text-xl font-bold">Front x Back</span>
+      <div className="container flex h-16 items-center justify-between">
+        <div className="flex items-center gap-6">
+          <div className="hidden items-center md:flex">
+            <FXBLogo className="mr-2 h-8 w-8 text-foreground" />
+            <span className="font-headline text-xl font-bold">Front x Back</span>
+          </div>
         </div>
-        
-        {isExploring && (
-             <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-                {navLinks.map(link => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        onClick={handleScroll}
-                        className="text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                        {link.label}
-                    </Link>
-                ))}
-            </nav>
-        )}
 
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex-1">
+          {isExploring && (
+              <nav className="hidden md:flex items-center justify-center space-x-6 text-sm font-medium">
+                  {navLinks.map(link => (
+                      <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={handleScroll}
+                          className="text-muted-foreground transition-colors hover:text-foreground"
+                      >
+                          {link.label}
+                      </Link>
+                  ))}
+              </nav>
+          )}
+        </div>
+
+        <div className="flex items-center justify-end space-x-4" style={{ minWidth: '200px'}}>
           <span className="hidden text-sm text-muted-foreground sm:inline">
             Bem-vindo,{' '}
             <span className="font-semibold text-foreground">{userName}</span>!
