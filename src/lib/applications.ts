@@ -140,7 +140,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Discord',
-    logo: 'https://picsum.photos/seed/discord/100/100',
+    logo: 'https://i.imgur.com/vJ8jpLJ.png',
     description: 'Plataforma de comunicação por voz, vídeo e texto.',
     technologies: getTechs(
         getTech('React', 'Frontend'),
@@ -515,6 +515,8 @@ export const applications: Application[] = [
     ),
   }
 ];
+
+    
 
     
 
