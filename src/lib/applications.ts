@@ -165,7 +165,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Uber',
-    logo: 'https://picsum.photos/seed/uber/100/100',
+    logo: 'https://i.imgur.com/zgMUfDy.png',
     description: 'Empresa de transporte que oferece serviços de motorista particular.',
      technologies: getTechs(
         getTech('React', 'Frontend'),
@@ -179,7 +179,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Slack',
-    logo: 'https://picsum.photos/seed/slack/100/100',
+    logo: 'https://i.imgur.com/alELPWx.png',
     description: 'Plataforma de mensagens para equipes e colaboração.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
