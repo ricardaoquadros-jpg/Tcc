@@ -382,7 +382,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Stripe',
-    logo: 'https://picsum.photos/seed/stripe/100/100',
+    logo: 'https://i.imgur.com/DZhwtCZ.png',
     description: 'Plataforma de processamento de pagamentos para negócios online.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -394,7 +394,7 @@ export const applications: Application[] = [
   },
   {
     name: 'PayPal',
-    logo: 'https://picsum.photos/seed/paypal/100/100',
+    logo: 'https://i.imgur.com/bVPHbSI.png',
     description: 'Sistema de pagamento online que atua como alternativa aos métodos tradicionais.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -530,3 +530,4 @@ export const applications: Application[] = [
     
 
     
+
