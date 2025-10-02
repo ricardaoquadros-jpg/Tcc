@@ -55,12 +55,17 @@ export default function MainPage() {
     }
   }, [router]);
 
+  useEffect(() => {
+    if (isExploring) {
+      const mainContentElement = document.getElementById('main-content-container');
+      if (mainContentElement) {
+        mainContentElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [isExploring]);
+
   const handleStartExploring = () => {
     setIsExploring(true);
-    const mainContentElement = document.getElementById('main-content-container');
-    if (mainContentElement) {
-        mainContentElement.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
   if (isLoading) {
