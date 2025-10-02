@@ -237,7 +237,7 @@ export const applications: Application[] = [
   },
   {
     name: 'LinkedIn',
-    logo: 'https://picsum.photos/seed/linkedin/100/100',
+    logo: 'https://i.imgur.com/ExxCxjA.png',
     description: 'A maior rede profissional do mundo.',
     technologies: getTechs(
       getTech('Ember.js', 'Frontend'),
@@ -248,7 +248,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Spotify',
-    logo: 'https://picsum.photos/seed/spotify/100/100',
+    logo: 'https://i.imgur.com/v92cIYr.png',
     description: 'Serviço de streaming de música, podcasts e vídeos.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -521,5 +521,8 @@ export const applications: Application[] = [
     
 
     
+
+    
+
 
     
