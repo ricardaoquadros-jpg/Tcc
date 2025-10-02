@@ -32,7 +32,6 @@ import {
   PaypalIcon,
   CanvaIcon,
   DropboxIcon,
-  NotionIcon,
 } from '@/components/icons';
 import type { ComponentType, SVGProps } from 'react';
 
@@ -504,16 +503,6 @@ export const applications: Application[] = [
       getTech('MySQL', 'Backend')
     ),
   },
-  {
-    name: 'Notion',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png',
-    description: 'Aplicativo de produtividade que oferece um espaço de trabalho tudo-em-um.',
-    technologies: getTechs(
-      getTech('React', 'Frontend'),
-      getTech('Node.js', 'Backend'),
-      getTech('PostgreSQL', 'Backend')
-    ),
-  }
 ];
 
     
@@ -530,6 +519,7 @@ export const applications: Application[] = [
     
 
     
+
 
 
 
