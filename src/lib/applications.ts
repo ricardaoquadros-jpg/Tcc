@@ -337,7 +337,7 @@ export const applications: Application[] = [
   },
   {
     name: 'TikTok',
-    logo: 'https://picsum.photos/seed/tiktok/100/100',
+    logo: 'https://i.imgur.com/riITNIV.png',
     description: 'Plataforma de vídeos curtos que se tornou um fenômeno global.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -349,7 +349,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Zoom',
-    logo: 'https://picsum.photos/seed/zoom/100/100',
+    logo: 'https://i.imgur.com/6oI2kpp.png',
     description: 'Plataforma líder de videoconferência e comunicação por vídeo.',
     technologies: getTechs(
       getTech('Angular', 'Frontend'),
