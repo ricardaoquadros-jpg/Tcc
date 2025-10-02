@@ -406,7 +406,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Instagram',
-    logo: 'https://i.imgur.com/ko4TgwK.png',
+    logo: 'https://i.imgur.com/ZtNPXxZ.png',
     description: 'Rede social de compartilhamento de fotos e vídeos.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -417,7 +417,7 @@ export const applications: Application[] = [
   },
   {
     name: 'WhatsApp',
-    logo: 'https://i.imgur.com/ko4TgwK.png',
+    logo: 'https://i.imgur.com/wvC69xz.png',
     description: 'Aplicativo de mensagens instantâneas para smartphones.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -428,7 +428,7 @@ export const applications: Application[] = [
   },
   {
     name: 'YouTube',
-    logo: 'https://i.imgur.com/xSoDTYn.png',
+    logo: 'https://i.imgur.com/BsxDYGu.png',
     description: 'A maior plataforma de compartilhamento de vídeos do mundo.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -530,4 +530,5 @@ export const applications: Application[] = [
     
 
     
+
 
