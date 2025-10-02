@@ -260,7 +260,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Trello',
-    logo: 'https://picsum.photos/seed/trello/100/100',
+    logo: 'https://i.imgur.com/rq73HzO.png',
     description: 'Ferramenta de gerenciamento de projetos no estilo Kanban.',
     technologies: getTechs(
       getTech('Backbone.js', 'Frontend'),
@@ -270,7 +270,7 @@ export const applications: Application[] = [
   },
   {
     name: 'GitHub',
-    logo: 'https://picsum.photos/seed/github/100/100',
+    logo: 'https://i.imgur.com/IkCnM7d.png',
     description: 'Plataforma de hospedagem de código e colaboração.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
