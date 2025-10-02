@@ -360,7 +360,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Salesforce',
-    logo: 'https://picsum.photos/seed/salesforce/100/100',
+    logo: 'https://i.imgur.com/ajFDeYS.png',
     description: 'Plataforma de CRM nº 1 do mundo para vendas, serviços e marketing.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -371,7 +371,7 @@ export const applications: Application[] = [
   },
   {
     name: 'eBay',
-    logo: 'https://picsum.photos/seed/ebay/100/100',
+    logo: 'https://i.imgur.com/D7mOmWK.png',
     description: 'Um dos maiores mercados online do mundo para leilões e vendas.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
