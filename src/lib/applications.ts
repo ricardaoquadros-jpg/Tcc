@@ -483,7 +483,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Canva',
-    logo: 'https://picsum.photos/seed/canva/100/100',
+    logo: 'https://i.imgur.com/f3ZHGOb.png',
     description: 'Plataforma de design gráfico que permite aos usuários criar gráficos e outros conteúdos visuais.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -494,7 +494,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Dropbox',
-    logo: 'https://picsum.photos/seed/dropbox/100/100',
+    logo: 'https://i.imgur.com/MOhdGfE.png',
     description: 'Serviço de armazenamento de arquivos em nuvem e sincronização.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -506,7 +506,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Notion',
-    logo: 'https://picsum.photos/seed/notion/100/100',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png',
     description: 'Aplicativo de produtividade que oferece um espaço de trabalho tudo-em-um.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -530,6 +530,7 @@ export const applications: Application[] = [
     
 
     
+
 
 
 
