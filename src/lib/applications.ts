@@ -314,7 +314,7 @@ export const applications: Application[] = [
   },
   {
     name: 'WordPress',
-    logo: 'https://i.imgur.com/SpWcbZ6.png',
+    logo: 'https://i.imgur.com/oz0hUTm.png',
     description: 'O sistema de gerenciamento de conteúdo (CMS) mais popular do mundo.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -325,7 +325,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Reddit',
-    logo: 'https://picsum.photos/seed/reddit/100/100',
+    logo: 'https://i.imgur.com/0trrrwz.png',
     description: 'Uma vasta rede de comunidades baseadas nos interesses das pessoas.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
