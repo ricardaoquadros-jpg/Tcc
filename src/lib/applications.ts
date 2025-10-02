@@ -304,7 +304,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Wikipedia',
-    logo: 'https://picsum.photos/seed/wikipedia/100/100',
+    logo: 'https://i.imgur.com/SpWcbZ6.png',
     description: 'A maior enciclopédia online livre e colaborativa do mundo.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -314,7 +314,7 @@ export const applications: Application[] = [
   },
   {
     name: 'WordPress',
-    logo: 'https://picsum.photos/seed/wordpress/100/100',
+    logo: 'https://i.imgur.com/SpWcbZ6.png',
     description: 'O sistema de gerenciamento de conteúdo (CMS) mais popular do mundo.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -524,6 +524,8 @@ export const applications: Application[] = [
 
     
 
+
+    
 
     
 
