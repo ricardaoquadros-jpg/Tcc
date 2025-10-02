@@ -281,7 +281,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Atlassian (Jira)',
-    logo: 'https://picsum.photos/seed/atlassian/100/100',
+    logo: 'https://i.imgur.com/HHjxCZM.png',
     description: 'Ferramenta líder para rastreamento de bugs e gerenciamento de projetos ágeis.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -292,7 +292,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Microsoft',
-    logo: 'https://picsum.photos/seed/microsoft/100/100',
+    logo: 'https://i.imgur.com/yjcOr8r.png',
     description: 'Gigante global de software, criadora do Windows e Office.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -461,7 +461,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Microsoft Office 365',
-    logo: 'https://picsum.photos/seed/office/100/100',
+    logo: 'https://i.imgur.com/yjcOr8r.png',
     description: 'Conjunto de aplicativos de produtividade em nuvem, como Word e Excel.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -524,5 +524,7 @@ export const applications: Application[] = [
 
     
 
+
+    
 
     
