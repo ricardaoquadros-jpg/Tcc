@@ -439,7 +439,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Google Maps',
-    logo: 'https://i.imgur.com/xSoDTYn.png',
+    logo: 'https://i.imgur.com/BvJJxlE.png',
     description: 'Serviço de pesquisa e visualização de mapas e imagens de satélite.',
     technologies: getTechs(
       getTech('JavaScript', 'Frontend'),
@@ -461,7 +461,7 @@ export const applications: Application[] = [
   },
   {
     name: 'Microsoft Office 365',
-    logo: 'https://i.imgur.com/yjcOr8r.png',
+    logo: 'https://i.imgur.com/qpd9DJu.png',
     description: 'Conjunto de aplicativos de produtividade em nuvem, como Word e Excel.',
     technologies: getTechs(
       getTech('React', 'Frontend'),
@@ -530,5 +530,6 @@ export const applications: Application[] = [
     
 
     
+
 
 
