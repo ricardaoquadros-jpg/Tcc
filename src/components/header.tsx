@@ -1,3 +1,4 @@
+
 "use client";
 
 import { FXBLogo } from '@/components/icons/fxb-logo';
@@ -17,6 +18,7 @@ const navLinks = [
     { href: '#applications', label: 'Aplicações' },
     { href: '#job-roles', label: 'Áreas de Trabalho' },
     { href: '#ai-explainer', label: 'Explicação com IA' },
+    { href: 'https://docs.google.com/forms/d/1uuFFCr333-F88wdLOD3o8gHyPRXAxW8dWCY6ww4mPf4/edit?pli=1#responses', label: 'Pesquisa' },
 ]
 
 export function Header({ userName, isExploring }: HeaderProps) {
@@ -48,16 +50,21 @@ export function Header({ userName, isExploring }: HeaderProps) {
         <div className="flex-1">
           {isExploring && (
               <nav className="hidden md:flex items-center justify-center space-x-6 text-sm font-medium">
-                  {navLinks.map(link => (
-                      <Link
-                          key={link.href}
-                          href={link.href}
-                          onClick={handleScroll}
-                          className="text-muted-foreground transition-colors hover:text-foreground"
-                      >
-                          {link.label}
-                      </Link>
-                  ))}
+                  {navLinks.map(link => {
+                      const isExternal = link.href.startsWith('http');
+                      return (
+                          <Link
+                              key={link.href}
+                              href={link.href}
+                              onClick={isExternal ? undefined : handleScroll}
+                              target={isExternal ? '_blank' : undefined}
+                              rel={isExternal ? 'noopener noreferrer' : undefined}
+                              className="text-muted-foreground transition-colors hover:text-foreground"
+                          >
+                              {link.label}
+                          </Link>
+                      )
+                  })}
               </nav>
           )}
         </div>
