@@ -9,29 +9,40 @@ import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, ResponsiveContaine
 import { FilePieChart } from 'lucide-react';
 import { FXBLogo } from '@/components/icons/fxb-logo';
 
-// Mock data simulating survey results
 const surveyData = {
-  totalResponses: 150,
+  totalResponses: 24,
   experienceLevel: [
-    { name: 'Iniciante (0-1 ano)', value: 45 },
-    { name: 'Júnior (1-3 anos)', value: 60 },
-    { name: 'Pleno (3-6 anos)', value: 30 },
-    { name: 'Sênior (6+ anos)', value: 15 },
+    { name: "Já atua/estuda na área", value: 15 },
+    { name: "Ainda não atua na área", value: 9 },
   ],
-  areaOfInterest: [
-    { name: 'Frontend', value: 70 },
-    { name: 'Backend', value: 55 },
-    { name: 'Full-Stack', value: 25 },
+  frontendTechs: [
+    { name: 'HTML', value: 23 },
+    { name: 'CSS', value: 22 },
+    { name: 'JavaScript', value: 20 },
+    { name: 'React', value: 11 },
+    { name: 'TypeScript', value: 8 },
+    { name: 'Python', value: 8 },
+    { name 'Node.js', value: 7 },
+    { name: 'Vue.js', value: 6 },
+    { name: 'Angular', value: 6 },
+    { name: 'PHP', value: 4 },
+    { name: 'MySQL', value: 2 },
+    { name: 'Java', value: 2 },
+    { name: 'Svelte', value: 1 },
   ],
-  technologiesOfInterest: [
-    { name: 'React', value: 85 },
-    { name: 'Node.js', value: 75 },
-    { name: 'Python', value: 65 },
-    { name: 'Vue.js', value: 40 },
-    { name: 'Java', value: 35 },
-    { name: 'Angular', value: 30 },
-    { name: 'Rust', value: 20 },
+  backendTechs: [
+    { name: 'Python', value: 19 },
+    { name: 'JavaScript', value: 16 },
+    { name: 'PHP', value: 12 },
+    { name: 'MySQL', value: 10 },
+    { name: 'Node.js', value: 7 },
+    { name: 'React', value: 1 },
   ],
+  employability: [
+      { name: 'Frontend', 'Nota Média': 3.42 },
+      { name: 'Backend', 'Nota Média': 3.58 },
+      { name: 'Full-Stack', 'Nota Média': 3.86 },
+  ]
 };
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8', '#82ca9d', '#ffc658'];
@@ -76,7 +87,7 @@ export default function SurveyPage() {
                     </h1>
                 </div>
                 <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-                    Dashboard com os dados coletados através do formulário. (Dados de exemplo)
+                    Dashboard com os dados coletados através do formulário de pesquisa.
                 </p>
                 <p className="mt-2 text-sm text-foreground">Total de Respostas: <span className='font-bold'>{surveyData.totalResponses}</span></p>
             </div>
@@ -85,31 +96,13 @@ export default function SurveyPage() {
                 <Card>
                     <CardHeader>
                         <CardTitle>Nível de Experiência</CardTitle>
-                        <CardDescription>Distribuição dos participantes por anos de experiência.</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <ResponsiveContainer width="100%" height={300}>
-                            <BarChart data={surveyData.experienceLevel}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" fontSize={12} tickLine={false} axisLine={false} />
-                                <YAxis fontSize={12} />
-                                <Tooltip formatter={(value) => `${value} (${((Number(value) / surveyData.totalResponses) * 100).toFixed(1)}%)`}/>
-                                <Bar dataKey="value" fill="hsl(var(--primary))" name="Participantes" />
-                            </BarChart>
-                        </ResponsiveContainer>
-                    </CardContent>
-                </Card>
-
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Área de Interesse Principal</CardTitle>
-                        <CardDescription>Preferência entre Frontend, Backend e Full-Stack.</CardDescription>
+                        <CardDescription>Distribuição dos participantes por experiência.</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <ResponsiveContainer width="100%" height={300}>
                             <PieChart>
-                                <Pie data={surveyData.areaOfInterest} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} label>
-                                    {surveyData.areaOfInterest.map((entry, index) => (
+                                <Pie data={surveyData.experienceLevel} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} label>
+                                    {surveyData.experienceLevel.map((entry, index) => (
                                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                     ))}
                                 </Pie>
@@ -120,20 +113,58 @@ export default function SurveyPage() {
                     </CardContent>
                 </Card>
 
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Percepção de Empregabilidade</CardTitle>
+                        <CardDescription>Nota média de empregabilidade (1-5).</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <ResponsiveContainer width="100%" height={300}>
+                            <BarChart data={surveyData.employability}>
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis dataKey="name" fontSize={12} tickLine={false} axisLine={false} />
+                                <YAxis domain={[0, 5]} fontSize={12} />
+                                <Tooltip formatter={(value) => `${Number(value).toFixed(2)}`}/>
+                                <Legend />
+                                <Bar dataKey="Nota Média" fill="hsl(var(--primary))" name="Nota Média" />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </CardContent>
+                </Card>
+
                  <Card className="lg:col-span-2">
                     <CardHeader>
-                        <CardTitle>Interesse em Tecnologias</CardTitle>
-                        <CardDescription>Quais tecnologias os participantes mais querem aprender.</CardDescription>
+                        <CardTitle>Tecnologias Associadas ao Frontend</CardTitle>
+                        <CardDescription>Quais tecnologias os participantes associaram ao desenvolvimento Frontend.</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <ResponsiveContainer width="100%" height={400}>
-                            <BarChart data={surveyData.technologiesOfInterest} layout="vertical">
+                            <BarChart data={surveyData.frontendTechs} layout="vertical">
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis type="number" fontSize={12} />
                                 <YAxis type="category" dataKey="name" width={80} fontSize={12} />
                                 <Tooltip />
                                 <Legend />
-                                <Bar dataKey="value" fill="hsl(var(--accent))" name="Votos de Interesse" />
+                                <Bar dataKey="value" fill="hsl(var(--frontend))" name="Votos" />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </CardContent>
+                </Card>
+                
+                 <Card className="lg:col-span-2">
+                    <CardHeader>
+                        <CardTitle>Tecnologias Associadas ao Backend</CardTitle>
+                        <CardDescription>Quais tecnologias os participantes associaram ao desenvolvimento Backend.</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <ResponsiveContainer width="100%" height={300}>
+                            <BarChart data={surveyData.backendTechs} layout="vertical">
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <XAxis type="number" fontSize={12} />
+                                <YAxis type="category" dataKey="name" width={80} fontSize={12} />
+                                <Tooltip />
+                                <Legend />
+                                <Bar dataKey="value" fill="hsl(var(--backend))" name="Votos" />
                             </BarChart>
                         </ResponsiveContainer>
                     </CardContent>
