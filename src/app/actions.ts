@@ -9,6 +9,10 @@ import {
   explainTechInApp,
   type ExplainTechInAppInput,
 } from '@/ai/flows/explain-tech-in-app';
+import { 
+  chatAboutTech, 
+  type ChatAboutTechInput 
+} from '@/ai/flows/chat-about-tech';
 
 export async function getExplanation(
   input: ExplainFrontendVsBackendInput
@@ -31,5 +35,17 @@ export async function getTechExplanation(
   } catch (error) {
     console.error('Error calling AI flow:', error);
     throw new Error('Failed to get tech explanation from AI.');
+  }
+}
+
+export async function getTechChatAnswer(
+  input: ChatAboutTechInput
+): Promise<string> {
+  try {
+    const result = await chatAboutTech(input);
+    return result.answer;
+  } catch (error) {
+    console.error('Error calling AI flow:', error);
+    throw new Error('Failed to get chat answer from AI.');
   }
 }
