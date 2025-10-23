@@ -22,7 +22,7 @@ const surveyData = {
     { name: 'React', value: 11 },
     { name: 'TypeScript', value: 8 },
     { name: 'Python', value: 8 },
-    { name 'Node.js', value: 7 },
+    { name: 'Node.js', value: 7 },
     { name: 'Vue.js', value: 6 },
     { name: 'Angular', value: 6 },
     { name: 'PHP', value: 4 },
