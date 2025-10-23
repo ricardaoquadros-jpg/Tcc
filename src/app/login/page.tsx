@@ -1,3 +1,4 @@
+
 import { FXBLogo } from '@/components/icons/fxb-logo';
 import { LoginForm } from '@/components/login-form';
 import {
@@ -7,12 +8,13 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import Link from 'next/link';
 
 export default function LoginPage() {
   return (
     <main className="flex min-h-screen w-full items-center justify-center bg-background p-4">
       <div className="flex animate-fade-in-up flex-col items-center space-y-8">
-        <div className="flex flex-col items-center space-y-2 text-center">
+        <Link href="/" className="flex flex-col items-center space-y-2 text-center">
           <FXBLogo className="h-16 w-16 text-foreground" />
           <h1 className="text-4xl font-headline font-bold text-foreground">
             Front x Back
@@ -21,7 +23,7 @@ export default function LoginPage() {
             Desvende os mistérios do desenvolvimento web, começando pela
             diferença fundamental entre Frontend e Backend.
           </p>
-        </div>
+        </Link>
         <Card className="w-full max-w-sm">
           <CardHeader>
             <CardTitle className="font-headline text-2xl">Bem-vindo!</CardTitle>
