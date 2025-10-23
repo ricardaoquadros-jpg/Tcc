@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -6,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis, Cell } from 'recharts';
-import { FilePieChart } from 'lucide-react';
+import { FilePieChart, Lightbulb, MessageSquare } from 'lucide-react';
 import { FXBLogo } from '@/components/icons/fxb-logo';
 
 const surveyData = {
@@ -42,6 +41,32 @@ const surveyData = {
       { name: 'Frontend', 'Nota Média': 3.42 },
       { name: 'Backend', 'Nota Média': 3.58 },
       { name: 'Full-Stack', 'Nota Média': 3.86 },
+  ],
+  specializationGoals: [
+    "Frontend do Pornhub",
+    "Computação em nuvem e devops",
+    "Backend",
+    "",
+    "",
+    "Não é exatamente o que eu vou me especializar, mas o mercado de trabalhado na indústria de TI está, no momento, a procura de profissionais que sabem trabalhar com machine learning e deep learning.",
+    "Operação de máquinas, pois não compactuo com a ideia de ser um vagabundo que fica parado na frente do pc o dia inteiro.",
+    "Na parte de hardware. Por que é a parte mais divertida da tecnologia pra mim.",
+    "Redes de Computadores",
+    "Programação backend, por conta dos altos salários e alta procura no mercado.",
+    "I.A.",
+    "IA",
+    "Pretendo me especializar como suporte L3, porque gosto de atendimento ao cliente, mas também encontrar bugs e resolver logs.",
+    "BackEnd por questões pessoais de preferir mexer com banco de dados e modelar como os sistemas devem funcionar, ao invés de fazer o seu design.",
+    "Tenho interesse em me especializar na área de inteligência artificial e aprendizado de máquina, porque acredito que essas tecnologias estão transformando praticamente todos os setores da sociedade. ",
+    "Cybersegurança",
+    "FullStack. Gosto de aprender de tudo e mesmo que tenha dificuldade em um ou outro, irei aprender ",
+    "BackEnd",
+    "Ainda não sei, só estou nessa área pelo dinheiro e pela minha família.",
+    "Desenvolvimento de Jogos, pois é o meu sonho atualmente.",
+    "",
+    "Backend - gosto muito dos códigos e resolução de problemas.",
+    "Não pretendo ",
+    "Mais no backend/infraestrutura e engenharia, pra poder atuar em projetos maiores e poder abranger mais áreas."
   ]
 };
 
@@ -72,6 +97,8 @@ export default function SurveyPage() {
       </div>
     );
   }
+
+  const validSpecializationGoals = surveyData.specializationGoals.filter(goal => goal && goal.trim() !== '');
 
   return (
     userName && (
@@ -169,6 +196,32 @@ export default function SurveyPage() {
                         </ResponsiveContainer>
                     </CardContent>
                 </Card>
+
+                <div className="lg:col-span-2 mt-8">
+                    <div className="mb-8 text-center">
+                        <div className="inline-flex items-center justify-center gap-3">
+                            <Lightbulb className="h-8 w-8 text-primary" />
+                            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">
+                                Aspirações de Carreira
+                            </h2>
+                        </div>
+                        <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+                            Em qual área da tecnologia os participantes pretendem se especializar e por quê?
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {validSpecializationGoals.map((goal, index) => (
+                            <Card key={index} className='bg-secondary/50'>
+                                <CardContent className="p-4">
+                                    <div className="flex items-start gap-3">
+                                        <MessageSquare className="h-5 w-5 mt-1 flex-shrink-0 text-primary/80" />
+                                        <p className="text-sm text-foreground/90">{goal}</p>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
             </div>
 
           </div>
