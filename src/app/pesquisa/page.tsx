@@ -1,10 +1,11 @@
+
 "use client";
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Header } from '@/components/header';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis, Cell } from 'recharts';
+import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis, Cell, LabelList } from 'recharts';
 import { FilePieChart, Lightbulb, MessageSquare } from 'lucide-react';
 import { FXBLogo } from '@/components/icons/fxb-logo';
 
@@ -99,6 +100,14 @@ export default function SurveyPage() {
   }
 
   const validSpecializationGoals = surveyData.specializationGoals.filter(goal => goal && goal.trim() !== '');
+  const renderCustomizedLabel = (props: any) => {
+    const { x, y, width, value } = props;
+    return (
+      <text x={x + width / 2} y={y} dy={-4} fill="hsl(var(--foreground))" fontSize={14} textAnchor="middle">
+        {value.toFixed(2)}
+      </text>
+    );
+  };
 
   return (
     userName && (
@@ -153,7 +162,9 @@ export default function SurveyPage() {
                                 <YAxis domain={[0, 5]} fontSize={12} />
                                 <Tooltip formatter={(value) => `${Number(value).toFixed(2)}`}/>
                                 <Legend />
-                                <Bar dataKey="Nota Média" fill="hsl(var(--primary))" name="Nota Média" />
+                                <Bar dataKey="Nota Média" fill="hsl(var(--primary))" name="Nota Média">
+                                  <LabelList dataKey="Nota Média" position="top" formatter={(value: number) => value.toFixed(2)} style={{ fill: 'hsl(var(--foreground))' }} />
+                                </Bar>
                             </BarChart>
                         </ResponsiveContainer>
                     </CardContent>
