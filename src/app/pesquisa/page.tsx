@@ -44,7 +44,6 @@ const surveyData = {
       { name: 'Full-Stack', 'Nota Média': 3.86 },
   ],
   specializationGoals: [
-    "Frontend do Pornhub",
     "Computação em nuvem e devops",
     "Backend",
     "",
